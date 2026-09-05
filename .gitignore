@@ -1,3 +1,4 @@
 # Claude Code local tooling config (machine-specific, not part of the project)
 .claude/
 Rplots.pdf
+.Rproj.user
