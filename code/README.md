@@ -40,5 +40,5 @@ the published paper (Amdi & King, 2025, *J Sports Sciences*, Table 2 / Figure 5)
 the pooled CMJ effect reproduces at g's 90% PI ≈ [-1.32, -0.13], matching the
 published [-1.34, -0.12] (small residual difference only because this script's
 default `rho = 0.4`, the sensitivity-analysis value, rather than the main
-analysis's `rho = 0.6` — change line 13 to reproduce the exact headline
-numbers in Table 2/Figures 3-5).
+analysis's `rho = 0.6` — change `rho <- 0.4` on line 25 to `rho <- 0.6` to
+reproduce the exact headline numbers in Table 2/Figures 3-5).

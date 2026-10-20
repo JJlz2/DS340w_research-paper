@@ -1,4 +1,54 @@
-# Claude Code local tooling config (machine-specific, not part of the project)
+# ------------------------------------------------------------------
+# Allowlist: everything in this folder is LOCAL ONLY unless it is
+# re-included below. What gets pushed: the papers used, the datasets,
+# the figures, and the code for the parent paper.
+# To push something else later, add a "!" line for it here.
+# ------------------------------------------------------------------
+/*
+
+# repo housekeeping
+!/.gitignore
+!/README.md
+!/DS340w_research-paper.Rproj
+
+# papers actually used (parent + the two reference papers)
+!/The effect of eccentric phase duration*.pdf
+!/reference_paper_1/
+/reference_paper_1/*
+!/reference_paper_1/journal.pone.0354725.pdf
+!/reference_paper_2/
+/reference_paper_2/*
+!/reference_paper_2/boykin-et-al-2024-comparative-analysis-of-acute-eccentric-contraction-induced-changes-to-the-skeletal-muscle.pdf
+
+# datasets
+!/data/
+/data/*
+!/data/README.md
+!/data/raw/
+
+# code for the parent paper
+!/code/
+/code/*
+!/code/README.md
+!/code/run_analysis.R
+!/code/generate_forest_plots.R
+!/code/generate_orchard_plot.R
+
+# figures (parent paper reproduction)
+!/figures/
+/figures/*
+!/figures/Figure*.png
+!/figures and data/
+/figures and data/*
+!/figures and data/Orchard_strength_training_status.png
+!/figures and data/t000*.csv
+
+# the parent paper's original OSF materials (minus the superseded pre-print version)
+!/s6uqn-osfstorage-archive/
+/s6uqn-osfstorage-archive/Pre-print stage without Kojic et al. 2025/
+
+# never pushed, wherever they appear
 .claude/
+.Rproj.user/
+.Rhistory
 Rplots.pdf
-.Rproj.user
