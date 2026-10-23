@@ -25,6 +25,7 @@
 /data/*
 !/data/README.md
 !/data/raw/
+!/data/splits/
 
 # code for the parent paper
 !/code/

@@ -13,7 +13,7 @@ The parent paper, Amdi & King (2025), is a meta-analysis of how the duration of 
 ## Repository layout
 | Path | Contents |
 |---|---|
-| `data/` | The parent paper's dataset and the raw participant data from Hao et al. (2026); see `data/README.md` |
+| `data/` | The parent paper's dataset, the raw participant data from Hao et al. (2026), and train / test / validation splits of the parent dataset; see `data/README.md` |
 | `code/run_analysis.R` | The authors' OSF analysis script, made runnable with two fixes (see `code/README.md`) |
 | `code/generate_forest_plots.R` | Rebuilds the paper's forest plots (Figures 3–5), which the authors' shared code doesn't include |
 | `code/generate_orchard_plot.R` | An orchard plot of the strength results by training status, with prediction intervals |
