@@ -104,6 +104,17 @@ hao_rows <- hao_rows[, parent_cols]
 dir.create("data/processed", showWarnings = FALSE, recursive = TRUE)
 write.csv(hao_rows, "data/processed/hao2026_rows.csv", row.names = FALSE)
 
-print(hao_rows %>% select(outcome, norm_n, norm_delta_mean, norm_delta_sd,
-                          slow_n, slow_delta_mean, slow_delta_sd))
+### The saved file keeps the parent datasheet's column names, because
+### steps 3 and 4 read it with the parent's equations. This summary is
+### the plain-English version to read: 2-s group = shorter eccentric
+### phase (2/0/X/0), 4-s group = longer eccentric phase (4/0/X/0).
+hao_summary <- hao_rows %>%
+  transmute(`Outcome` = c(strength = "Squat 1RM (kg)", power = "CMJ height (cm)")[outcome],
+            `2-s group: lifters` = norm_n,
+            `2-s group: mean change` = norm_delta_mean,
+            `2-s group: SD of change` = norm_delta_sd,
+            `4-s group: lifters` = slow_n,
+            `4-s group: mean change` = slow_delta_mean,
+            `4-s group: SD of change` = slow_delta_sd)
+print(hao_summary, row.names = FALSE)
 cat("Wrote data/processed/hao2026_rows.csv\n")

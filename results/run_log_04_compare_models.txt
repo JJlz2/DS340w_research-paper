@@ -5,48 +5,78 @@ Warning messages:
 4: package 'ranger' was built under R version 4.4.3 
 
 === Check: Bayesian likelihood vs the authors' REML fit ===
-     outcome rma_est grid_est rma_tau2 grid_tau2
-    Strength  0.2512   0.2516   0.3027    0.3136
- Hypertrophy  0.0517   0.0513   0.0595    0.0576
-         CMJ -0.7337  -0.7337   0.0000    0.0000
+     Outcome Authors' model: pooled g Bayesian code without priors: pooled g Authors' model: between-trial variance
+    Strength                   0.2512                                 0.2516                                 0.3027
+ Hypertrophy                   0.0517                                 0.0513                                 0.0595
+         CMJ                  -0.7337                                -0.7337                                 0.0000
+ Bayesian code without priors: between-trial variance
+                                               0.3136
+                                               0.0576
+                                               0.0000
 
 === Model comparison (90% intervals for the observed effect; lower interval score is better) ===
-                                     test      outcome                                   model cases mean_abs_error coverage_90 mean_width mean_interval_score
- Leave-one-study-out (9 original studies) All outcomes                    Parent meta-analysis    29          0.455       0.966       3.21                3.75
- Leave-one-study-out (9 original studies) All outcomes                  Bayesian meta-analysis    29          0.459       0.897       2.38                3.05
- Leave-one-study-out (9 original studies) All outcomes                      Random forest (ML)    29          0.532       0.724       1.83                4.30
- Leave-one-study-out (9 original studies) All outcomes                Average of other studies    29          0.462          NA         NA                  NA
- Leave-one-study-out (9 original studies) All outcomes Bayesian, prior scale 1.0 (sensitivity)    29          0.461       0.931       2.90                3.44
- Leave-one-study-out (9 original studies)     Strength                    Parent meta-analysis    11          0.507       0.909       2.85                4.28
- Leave-one-study-out (9 original studies)     Strength                  Bayesian meta-analysis    11          0.511       0.909       2.50                3.95
- Leave-one-study-out (9 original studies)     Strength                      Random forest (ML)    11          0.668       0.727       1.90                4.15
- Leave-one-study-out (9 original studies)     Strength                Average of other studies    11          0.515          NA         NA                  NA
- Leave-one-study-out (9 original studies)     Strength Bayesian, prior scale 1.0 (sensitivity)    11          0.511       0.909       2.88                4.25
- Leave-one-study-out (9 original studies)  Hypertrophy                    Parent meta-analysis    14          0.432       1.000       2.35                2.35
- Leave-one-study-out (9 original studies)  Hypertrophy                  Bayesian meta-analysis    14          0.438       0.857       2.14                2.38
- Leave-one-study-out (9 original studies)  Hypertrophy                      Random forest (ML)    14          0.477       0.714       1.79                4.27
- Leave-one-study-out (9 original studies)  Hypertrophy                Average of other studies    14          0.444          NA         NA                  NA
- Leave-one-study-out (9 original studies)  Hypertrophy Bayesian, prior scale 1.0 (sensitivity)    14          0.440       0.929       2.45                2.50
- Leave-one-study-out (9 original studies)          CMJ                    Parent meta-analysis     4          0.390       1.000       7.21                7.21
- Leave-one-study-out (9 original studies)          CMJ                  Bayesian meta-analysis     4          0.393       1.000       2.90                2.90
- Leave-one-study-out (9 original studies)          CMJ                      Random forest (ML)     4          0.348       0.750       1.72                4.82
- Leave-one-study-out (9 original studies)          CMJ                Average of other studies     4          0.380          NA         NA                  NA
- Leave-one-study-out (9 original studies)          CMJ Bayesian, prior scale 1.0 (sensitivity)     4          0.396       1.000       4.49                4.49
-              External: Hao et al. (2026) All outcomes                    Parent meta-analysis     2          1.888       0.500       3.51                9.05
-              External: Hao et al. (2026) All outcomes                  Bayesian meta-analysis     2          1.883       0.500       2.75               14.28
-              External: Hao et al. (2026) All outcomes                      Random forest (ML)     2          2.173       0.000       2.17               26.53
-              External: Hao et al. (2026) All outcomes                Average of other studies     2          1.903          NA         NA                  NA
-              External: Hao et al. (2026) All outcomes Bayesian, prior scale 1.0 (sensitivity)     2          1.884       0.500       3.23               11.40
+                                     Test      Outcome                                   Model Test cases Mean absolute error Coverage (target 0.90)
+ Leave-one-study-out (9 original studies) All outcomes                    Parent meta-analysis         29               0.455                  0.966
+ Leave-one-study-out (9 original studies) All outcomes                  Bayesian meta-analysis         29               0.459                  0.897
+ Leave-one-study-out (9 original studies) All outcomes                      Random forest (ML)         29               0.532                  0.724
+ Leave-one-study-out (9 original studies) All outcomes                Average of other studies         29               0.462                     NA
+ Leave-one-study-out (9 original studies) All outcomes Bayesian, prior scale 1.0 (sensitivity)         29               0.461                  0.931
+ Leave-one-study-out (9 original studies)     Strength                    Parent meta-analysis         11               0.507                  0.909
+ Leave-one-study-out (9 original studies)     Strength                  Bayesian meta-analysis         11               0.511                  0.909
+ Leave-one-study-out (9 original studies)     Strength                      Random forest (ML)         11               0.668                  0.727
+ Leave-one-study-out (9 original studies)     Strength                Average of other studies         11               0.515                     NA
+ Leave-one-study-out (9 original studies)     Strength Bayesian, prior scale 1.0 (sensitivity)         11               0.511                  0.909
+ Leave-one-study-out (9 original studies)  Hypertrophy                    Parent meta-analysis         14               0.432                  1.000
+ Leave-one-study-out (9 original studies)  Hypertrophy                  Bayesian meta-analysis         14               0.438                  0.857
+ Leave-one-study-out (9 original studies)  Hypertrophy                      Random forest (ML)         14               0.477                  0.714
+ Leave-one-study-out (9 original studies)  Hypertrophy                Average of other studies         14               0.444                     NA
+ Leave-one-study-out (9 original studies)  Hypertrophy Bayesian, prior scale 1.0 (sensitivity)         14               0.440                  0.929
+ Leave-one-study-out (9 original studies)          CMJ                    Parent meta-analysis          4               0.390                  1.000
+ Leave-one-study-out (9 original studies)          CMJ                  Bayesian meta-analysis          4               0.393                  1.000
+ Leave-one-study-out (9 original studies)          CMJ                      Random forest (ML)          4               0.348                  0.750
+ Leave-one-study-out (9 original studies)          CMJ                Average of other studies          4               0.380                     NA
+ Leave-one-study-out (9 original studies)          CMJ Bayesian, prior scale 1.0 (sensitivity)          4               0.396                  1.000
+              External: Hao et al. (2026) All outcomes                    Parent meta-analysis          2               1.888                  0.500
+              External: Hao et al. (2026) All outcomes                  Bayesian meta-analysis          2               1.883                  0.500
+              External: Hao et al. (2026) All outcomes                      Random forest (ML)          2               2.173                  0.000
+              External: Hao et al. (2026) All outcomes                Average of other studies          2               1.903                     NA
+              External: Hao et al. (2026) All outcomes Bayesian, prior scale 1.0 (sensitivity)          2               1.884                  0.500
+ Mean interval width Mean interval score (lower is better)
+                3.21                                  3.75
+                2.38                                  3.05
+                1.83                                  4.30
+                  NA                                    NA
+                2.90                                  3.44
+                2.85                                  4.28
+                2.50                                  3.95
+                1.90                                  4.15
+                  NA                                    NA
+                2.88                                  4.25
+                2.35                                  2.35
+                2.14                                  2.38
+                1.79                                  4.27
+                  NA                                    NA
+                2.45                                  2.50
+                7.21                                  7.21
+                2.90                                  2.90
+                1.72                                  4.82
+                  NA                                    NA
+                4.49                                  4.49
+                3.51                                  9.05
+                2.75                                 14.28
+                2.17                                 26.53
+                  NA                                    NA
+                3.23                                 11.40
 
 === External test, case by case ===
-  outcome                                   model observed_g predicted     lo    hi inside
- Strength                    Parent meta-analysis     -0.851     0.251 -1.139 1.642   TRUE
- Strength                  Bayesian meta-analysis     -0.851     0.248 -0.983 1.485   TRUE
- Strength                      Random forest (ML)     -0.851     0.249 -0.602 1.261  FALSE
- Strength                Average of other studies     -0.851     0.266     NA    NA     NA
- Strength Bayesian, prior scale 1.0 (sensitivity)     -0.851     0.251 -1.131 1.642   TRUE
-      CMJ                    Parent meta-analysis     -3.407    -0.734 -2.853 1.386  FALSE
-      CMJ                  Bayesian meta-analysis     -3.407    -0.740 -2.255 0.773  FALSE
-      CMJ                      Random forest (ML)     -3.407    -0.161 -1.221 1.261  FALSE
-      CMJ                Average of other studies     -3.407    -0.718     NA    NA     NA
-      CMJ Bayesian, prior scale 1.0 (sensitivity)     -3.407    -0.742 -2.591 1.103  FALSE
+  Outcome                                   Model Observed g Predicted g 90% interval lower 90% interval upper Inside interval
+ Strength                    Parent meta-analysis     -0.851       0.251             -1.139              1.642            TRUE
+ Strength                  Bayesian meta-analysis     -0.851       0.248             -0.983              1.485            TRUE
+ Strength                      Random forest (ML)     -0.851       0.249             -0.602              1.261           FALSE
+ Strength                Average of other studies     -0.851       0.266                 NA                 NA              NA
+ Strength Bayesian, prior scale 1.0 (sensitivity)     -0.851       0.251             -1.131              1.642            TRUE
+      CMJ                    Parent meta-analysis     -3.407      -0.734             -2.853              1.386           FALSE
+      CMJ                  Bayesian meta-analysis     -3.407      -0.740             -2.255              0.773           FALSE
+      CMJ                      Random forest (ML)     -3.407      -0.161             -1.221              1.261           FALSE
+      CMJ                Average of other studies     -3.407      -0.718                 NA                 NA              NA
+      CMJ Bayesian, prior scale 1.0 (sensitivity)     -3.407      -0.742             -2.591              1.103           FALSE

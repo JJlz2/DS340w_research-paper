@@ -88,3 +88,54 @@ obs_interval <- function(m, v) {
   half <- qt(0.95, df = m$df) * sqrt(m$se^2 + m$tau2 + v)
   c(lo = m$est - half, hi = m$est + half)
 }
+
+### ------------------------------------------------------------
+### Plain-English column names for the saved tables, the console
+### summaries and the tables left in the R session. The calculations
+### use the short names above; only what people read is renamed.
+### ------------------------------------------------------------
+plain_labels <- c(
+  model = "Model", version = "Version", test = "Test", outcome = "Outcome",
+  study = "Study", held_out = "Held-out study", measure = "Measure",
+  comparison = "Comparison", prediction = "Prediction",
+  studies = "Studies", k = "Effect sizes", est = "Pooled g", g = "Hedges' g",
+  se = "Standard error", tau2 = "Between-trial variance", df = "Degrees of freedom",
+  ci_lo = "90% CI lower", ci_hi = "90% CI upper",
+  pi_lo = "90% PI lower", pi_hi = "90% PI upper",
+  pub_est = "Published pooled g",
+  pub_ci_lo = "Published 90% CI lower", pub_ci_hi = "Published 90% CI upper",
+  pub_pi_lo = "Published 90% PI lower", pub_pi_hi = "Published 90% PI upper",
+  max_abs_diff = "Largest difference from published",
+  parent_est = "Parent pooled g",
+  parent_ci_lo = "Parent 90% CI lower", parent_ci_hi = "Parent 90% CI upper",
+  parent_pi_lo = "Parent 90% PI lower", parent_pi_hi = "Parent 90% PI upper",
+  obs_lo = "90% interval for observed effect, lower",
+  obs_hi = "90% interval for observed effect, upper",
+  hao_g = "Hao g", hao_se = "Hao standard error",
+  hao_ci_lo = "Hao 90% CI lower", hao_ci_hi = "Hao 90% CI upper",
+  inside_reported_pi = "Inside published PI",
+  inside_observed_interval = "Inside interval for observed effect",
+  rope = "Trivial-effect bound (+/-)",
+  observed_g = "Observed g", predicted = "Predicted g",
+  train_studies = "Training studies", train_df = "Training degrees of freedom",
+  error = "Error (observed minus predicted)",
+  test_cases = "Test cases", held_out_studies = "Held-out studies",
+  coverage_reported_pi = "Coverage of published PI",
+  coverage_observed_interval = "Coverage of interval for observed effect",
+  mean_abs_error = "Mean absolute error",
+  lo = "90% interval lower", hi = "90% interval upper",
+  inside = "Inside interval", width = "Interval width",
+  interval_score = "Interval score", cases = "Test cases",
+  coverage_90 = "Coverage (target 0.90)", mean_width = "Mean interval width",
+  mean_interval_score = "Mean interval score (lower is better)",
+  rma_est = "Authors' model: pooled g",
+  grid_est = "Bayesian code without priors: pooled g",
+  rma_tau2 = "Authors' model: between-trial variance",
+  grid_tau2 = "Bayesian code without priors: between-trial variance")
+
+plain_names <- function(d) {
+  d <- as.data.frame(d)
+  hit <- names(d) %in% names(plain_labels)
+  names(d)[hit] <- plain_labels[names(d)[hit]]
+  d
+}

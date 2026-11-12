@@ -1,4 +1,4 @@
-"outcome","held_out","measure","comparison","observed_g","predicted","pi_lo","pi_hi","obs_lo","obs_hi","train_studies","train_df","error","inside_reported_pi","inside_observed_interval"
+"Outcome","Held-out study","Measure","Comparison","Observed g","Predicted g","90% PI lower","90% PI upper","90% interval for observed effect, lower","90% interval for observed effect, upper","Training studies","Training degrees of freedom","Error (observed minus predicted)","Inside published PI","Inside interval for observed effect"
 "Strength","Dias et al. (2015)","leg_press","slow v norm",0.0905065840833976,0.286666238054047,-0.97875074308723,1.55208321919532,-1.22917827501031,1.8025107511184,8,6.85890954410796,-0.196159653970649,TRUE,TRUE
 "Strength","Dias et al. (2015)","leg_extension","slow v norm",-0.0944798678954744,0.286666238054047,-0.97875074308723,1.55208321919532,-1.22920131778067,1.80253379388876,8,6.85890954410796,-0.381146105949521,TRUE,TRUE
 "Strength","Pereira et al. (2016)","scott_curl","slow v norm",0.567760790834508,0.222389249828022,-1.00656402452445,1.45134252418049,-1.38475764889383,1.82953614854987,8,6.89513772319196,0.345371541006486,TRUE,TRUE

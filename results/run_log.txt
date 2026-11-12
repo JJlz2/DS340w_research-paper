@@ -8,46 +8,62 @@ Warning message:
 ℹ Please use <ggplot> + x instead. 
 
 === A. Reproduction (rho = 0.6) ===
-                     model studies  k     est   ci_lo  ci_hi   pi_lo  pi_hi     tau2 max_abs_diff
-     Strength: all studies       9 11  0.2512 -0.1719  0.674 -0.8589  1.361 3.03e-01      0.00427
-         Strength: trained       4  5  0.3350  0.0682  0.602  0.0682  0.602 5.75e-13      0.00495
-       Strength: untrained       5  6  0.1525 -0.7972  1.102 -2.0042  2.309 8.23e-01      0.00418
-     Strength: multi-joint       5  7  0.0848 -0.7275  0.897 -1.6935  1.863 5.50e-01      0.00480
-    Strength: single-joint       4  4  0.3987 -0.2297  1.027 -0.6882  1.485 1.28e-01      0.00971
- Strength: sets to failure       5  5  0.2618 -0.7268  1.250 -1.9633  2.487 8.72e-01      0.00333
-     Strength: volume-load       4  6  0.2467  0.0416  0.452  0.0416  0.452 9.28e-13      0.00328
-  Hypertrophy: all studies       6 14  0.0517 -0.2243  0.328 -0.5433  0.647 5.95e-02      0.00433
-          CMJ: all studies       3  4 -0.7337 -1.3464 -0.121 -1.3464 -0.121 0.00e+00      0.00372
+                     Model Studies Effect sizes Pooled g 90% CI lower 90% CI upper 90% PI lower 90% PI upper Between-trial variance
+     Strength: all studies       9           11   0.2512      -0.1719        0.674      -0.8589        1.361               3.03e-01
+         Strength: trained       4            5   0.3350       0.0682        0.602       0.0682        0.602               5.75e-13
+       Strength: untrained       5            6   0.1525      -0.7972        1.102      -2.0042        2.309               8.23e-01
+     Strength: multi-joint       5            7   0.0848      -0.7275        0.897      -1.6935        1.863               5.50e-01
+    Strength: single-joint       4            4   0.3987      -0.2297        1.027      -0.6882        1.485               1.28e-01
+ Strength: sets to failure       5            5   0.2618      -0.7268        1.250      -1.9633        2.487               8.72e-01
+     Strength: volume-load       4            6   0.2467       0.0416        0.452       0.0416        0.452               9.28e-13
+  Hypertrophy: all studies       6           14   0.0517      -0.2243        0.328      -0.5433        0.647               5.95e-02
+          CMJ: all studies       3            4  -0.7337      -1.3464       -0.121      -1.3464       -0.121               0.00e+00
+ Largest difference from published
+                           0.00427
+                           0.00495
+                           0.00418
+                           0.00480
+                           0.00971
+                           0.00333
+                           0.00328
+                           0.00433
+                           0.00372
 
 === Hao et al. (2026) effect sizes ===
-  outcome    measure      g    se
- strength back_squat -0.851 0.449
-    power        cmj -3.407 0.688
+  Outcome    Measure Hedges' g Standard error
+ strength back_squat    -0.851          0.449
+    power        cmj    -3.407          0.688
 
 === B. External test ===
-                prediction parent_pi_lo parent_pi_hi obs_lo obs_hi  hao_g inside_reported_pi inside_observed_interval
-     Strength: all studies      -0.8589        1.361 -1.139   1.64 -0.851               TRUE                     TRUE
-         Strength: trained       0.0682        0.602 -0.908   1.58 -0.851              FALSE                     TRUE
- Strength: sets to failure      -1.9633        2.487 -2.161   2.68 -0.851               TRUE                     TRUE
-     Strength: multi-joint      -1.6935        1.863 -1.935   2.10 -0.851               TRUE                     TRUE
-          CMJ: all studies      -1.3464       -0.121 -2.853   1.39 -3.407              FALSE                    FALSE
+                Prediction Parent 90% PI lower Parent 90% PI upper 90% interval for observed effect, lower 90% interval for observed effect, upper  Hao g
+     Strength: all studies             -0.8589               1.361                                  -1.139                                    1.64 -0.851
+         Strength: trained              0.0682               0.602                                  -0.908                                    1.58 -0.851
+ Strength: sets to failure             -1.9633               2.487                                  -2.161                                    2.68 -0.851
+     Strength: multi-joint             -1.6935               1.863                                  -1.935                                    2.10 -0.851
+          CMJ: all studies             -1.3464              -0.121                                  -2.853                                    1.39 -3.407
+ Inside published PI Inside interval for observed effect
+                TRUE                                TRUE
+               FALSE                                TRUE
+                TRUE                                TRUE
+                TRUE                                TRUE
+               FALSE                               FALSE
 
 === C. LOSO coverage (target ~0.90) ===
-      outcome test_cases held_out_studies coverage_reported_pi coverage_observed_interval mean_abs_error
-          CMJ          4                3                0.750                      1.000          0.390
-  Hypertrophy         14                6                0.857                      1.000          0.432
-     Strength         11                9                0.818                      0.909          0.507
- All outcomes         29                9                0.828                      0.966          0.455
+      Outcome Test cases Held-out studies Coverage of published PI Coverage of interval for observed effect Mean absolute error
+          CMJ          4                3                    0.750                                    1.000               0.390
+  Hypertrophy         14                6                    0.857                                    1.000               0.432
+     Strength         11                9                    0.818                                    0.909               0.507
+ All outcomes         29                9                    0.828                                    0.966               0.455
 
 === D. Before vs after adding Hao et al. (2026) ===
-                     model              version studies  k     est   ci_lo  ci_hi   pi_lo  pi_hi     tau2
-     Strength: all studies   Parent (9 studies)       9 11  0.2512 -0.1719  0.674 -0.8589  1.361 3.03e-01
-         Strength: trained   Parent (9 studies)       4  5  0.3350  0.0682  0.602  0.0682  0.602 5.75e-13
- Strength: sets to failure   Parent (9 studies)       5  5  0.2618 -0.7268  1.250 -1.9633  2.487 8.72e-01
-     Strength: multi-joint   Parent (9 studies)       5  7  0.0848 -0.7275  0.897 -1.6935  1.863 5.50e-01
-     Strength: all studies Updated (+ Hao 2026)      10 12  0.1490 -0.2759  0.574 -1.0453  1.343 3.69e-01
-         Strength: trained Updated (+ Hao 2026)       5  6  0.1600 -0.3063  0.626 -0.6259  0.946 8.23e-02
- Strength: sets to failure Updated (+ Hao 2026)       6  6  0.0758 -0.7707  0.922 -1.9743  2.126 8.57e-01
-     Strength: multi-joint Updated (+ Hao 2026)       6  8 -0.0677 -0.7705  0.635 -1.7172  1.582 5.48e-01
-          CMJ: all studies   Parent (9 studies)       3  4 -0.7337 -1.3464 -0.121 -1.3464 -0.121 0.00e+00
-          CMJ: all studies Updated (+ Hao 2026)       4  5 -1.3358 -2.7946  0.123 -4.4208  1.749 1.33e+00
+                     Model              Version Studies Effect sizes Pooled g 90% CI lower 90% CI upper 90% PI lower 90% PI upper Between-trial variance
+     Strength: all studies   Parent (9 studies)       9           11   0.2512      -0.1719        0.674      -0.8589        1.361               3.03e-01
+         Strength: trained   Parent (9 studies)       4            5   0.3350       0.0682        0.602       0.0682        0.602               5.75e-13
+ Strength: sets to failure   Parent (9 studies)       5            5   0.2618      -0.7268        1.250      -1.9633        2.487               8.72e-01
+     Strength: multi-joint   Parent (9 studies)       5            7   0.0848      -0.7275        0.897      -1.6935        1.863               5.50e-01
+     Strength: all studies Updated (+ Hao 2026)      10           12   0.1490      -0.2759        0.574      -1.0453        1.343               3.69e-01
+         Strength: trained Updated (+ Hao 2026)       5            6   0.1600      -0.3063        0.626      -0.6259        0.946               8.23e-02
+ Strength: sets to failure Updated (+ Hao 2026)       6            6   0.0758      -0.7707        0.922      -1.9743        2.126               8.57e-01
+     Strength: multi-joint Updated (+ Hao 2026)       6            8  -0.0677      -0.7705        0.635      -1.7172        1.582               5.48e-01
+          CMJ: all studies   Parent (9 studies)       3            4  -0.7337      -1.3464       -0.121      -1.3464       -0.121               0.00e+00
+          CMJ: all studies Updated (+ Hao 2026)       4            5  -1.3358      -2.7946        0.123      -4.4208        1.749               1.33e+00

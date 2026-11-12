@@ -196,7 +196,7 @@ predictions <- bind_rows(loso, external) %>%
          inside = observed_g >= lo & observed_g <= hi,
          width = hi - lo,
          interval_score = interval_score(observed_g, lo, hi))
-write.csv(predictions, "results/E_model_comparison_predictions.csv", row.names = FALSE)
+write.csv(plain_names(predictions), "results/E_model_comparison_predictions.csv", row.names = FALSE)
 
 score <- function(d) {
   d %>% summarise(cases = n(),
@@ -210,7 +210,7 @@ summary_tbl <- bind_rows(
   predictions %>% filter(test == first(loso$test)) %>% group_by(test, outcome, model) %>% score()) %>%
   select(test, outcome, everything()) %>%
   arrange(desc(test), factor(outcome, levels = c("All outcomes", names(outcomes))), model)
-write.csv(summary_tbl, "results/E_model_comparison_summary.csv", row.names = FALSE)
+write.csv(plain_names(summary_tbl), "results/E_model_comparison_summary.csv", row.names = FALSE)
 
 ### ------------------------------------------------------------
 ### Check: with the priors removed, the Bayesian code's likelihood
@@ -229,10 +229,16 @@ reml_check <- bind_rows(lapply(names(outcomes), function(lbl) {
 ### ------------------------------------------------------------
 options(width = 160)
 cat("\n=== Check: Bayesian likelihood vs the authors' REML fit ===\n")
-print(reml_check, digits = 3, row.names = FALSE)
+print(plain_names(reml_check), digits = 3, row.names = FALSE)
 cat("\n=== Model comparison (90% intervals for the observed effect; lower interval score is better) ===\n")
-print(as.data.frame(summary_tbl), digits = 3, row.names = FALSE)
+print(plain_names(summary_tbl), digits = 3, row.names = FALSE)
 cat("\n=== External test, case by case ===\n")
-print(predictions %>% filter(test == first(external$test)) %>%
-        select(outcome, model, observed_g, predicted, lo, hi, inside),
+print(plain_names(predictions %>% filter(test == first(external$test)) %>%
+                    select(outcome, model, observed_g, predicted, lo, hi, inside)),
       digits = 3, row.names = FALSE)
+
+### The result tables left in the R session get the same plain-English
+### column names as the saved files, for View() in RStudio.
+reml_check  <- plain_names(reml_check)
+summary_tbl <- plain_names(summary_tbl)
+predictions <- plain_names(predictions)

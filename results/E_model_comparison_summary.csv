@@ -1,4 +1,4 @@
-"test","outcome","model","cases","mean_abs_error","coverage_90","mean_width","mean_interval_score"
+"Test","Outcome","Model","Test cases","Mean absolute error","Coverage (target 0.90)","Mean interval width","Mean interval score (lower is better)"
 "Leave-one-study-out (9 original studies)","All outcomes","Parent meta-analysis",29,0.454656619524635,0.96551724137931,3.2122695404346,3.75142861076654
 "Leave-one-study-out (9 original studies)","All outcomes","Bayesian meta-analysis",29,0.459379857181993,0.896551724137931,2.38170226970046,3.04787026800028
 "Leave-one-study-out (9 original studies)","All outcomes","Random forest (ML)",29,0.531631010863818,0.724137931034483,1.82514348373557,4.29904545598057

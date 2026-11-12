@@ -1,4 +1,4 @@
-"outcome","study","measure","comparison","observed_g","model","predicted","lo","hi","test","error","inside","width","interval_score"
+"Outcome","Study","Measure","Comparison","Observed g","Model","Predicted g","90% interval lower","90% interval upper","Test","Error (observed minus predicted)","Inside interval","Interval width","Interval score"
 "Strength","Dias et al. (2015)","leg_press","slow v norm",0.0905065840833976,"Parent meta-analysis",0.286666238054047,-1.22917827501031,1.8025107511184,"Leave-one-study-out (9 original studies)",-0.196159653970649,TRUE,3.03168902612871,3.03168902612871
 "Strength","Dias et al. (2015)","leg_press","slow v norm",0.0905065840833976,"Bayesian meta-analysis",0.287891333947853,-1.03550909218436,1.62028516481903,"Leave-one-study-out (9 original studies)",-0.197384749864456,TRUE,2.65579425700339,2.65579425700339
 "Strength","Dias et al. (2015)","leg_press","slow v norm",0.0905065840833976,"Random forest (ML)",0.310511031105633,-1.22075979121769,1.26114955341353,"Leave-one-study-out (9 original studies)",-0.220004447022235,TRUE,2.48190934463122,2.48190934463122

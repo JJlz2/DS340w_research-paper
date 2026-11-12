@@ -86,7 +86,7 @@ reproduction <- bind_rows(lapply(names(parent_models), function(nm)
   left_join(published, by = "model") %>%
   mutate(max_abs_diff = pmax(abs(est - pub_est), abs(ci_lo - pub_ci_lo), abs(ci_hi - pub_ci_hi),
                              abs(pi_lo - pub_pi_lo), abs(pi_hi - pub_pi_hi)))
-write.csv(reproduction, "results/A_reproduction_check.csv", row.names = FALSE)
+write.csv(plain_names(reproduction), "results/A_reproduction_check.csv", row.names = FALSE)
 
 ### ------------------------------------------------------------
 ### B. External test on Hao et al. (2026)
@@ -116,7 +116,7 @@ external <- bind_rows(lapply(seq_len(nrow(tests)), function(i) {
              inside_observed_interval = new$g >= oi[["lo"]] & new$g <= oi[["hi"]],
              rope = unname(roped[tests$outcome[i]]))
 }))
-write.csv(external, "results/B_external_test_hao2026.csv", row.names = FALSE)
+write.csv(plain_names(external), "results/B_external_test_hao2026.csv", row.names = FALSE)
 
 ### ------------------------------------------------------------
 ### C. Leave-one-study-out on the original nine studies
@@ -144,7 +144,7 @@ loso <- bind_rows(loso_outcome(str_parent, "Strength"),
   mutate(error = observed_g - predicted,
          inside_reported_pi = observed_g >= pi_lo & observed_g <= pi_hi,
          inside_observed_interval = observed_g >= obs_lo & observed_g <= obs_hi)
-write.csv(loso, "results/C_loso_predictions.csv", row.names = FALSE)
+write.csv(plain_names(loso), "results/C_loso_predictions.csv", row.names = FALSE)
 
 coverage <- loso %>%
   group_by(outcome) %>%
@@ -157,7 +157,7 @@ coverage <- loso %>%
                                coverage_reported_pi = mean(inside_reported_pi),
                                coverage_observed_interval = mean(inside_observed_interval),
                                mean_abs_error = mean(abs(error))))
-write.csv(coverage, "results/C_loso_coverage_summary.csv", row.names = FALSE)
+write.csv(plain_names(coverage), "results/C_loso_coverage_summary.csv", row.names = FALSE)
 
 ### ------------------------------------------------------------
 ### D. Update: add Hao et al. (2026) and refit
@@ -174,7 +174,7 @@ updated <- bind_rows(
     cbind(model = nm, version = "Updated (+ Hao 2026)", fit_meta(subgroups[[nm]](str_updated))))),
   cbind(model = "CMJ: all studies", version = "Parent (9 studies)", parent_models[["CMJ: all studies"]]),
   cbind(model = "CMJ: all studies", version = "Updated (+ Hao 2026)", fit_meta(cmj_updated)))
-write.csv(updated, "results/D_update_before_after.csv", row.names = FALSE)
+write.csv(plain_names(updated), "results/D_update_before_after.csv", row.names = FALSE)
 
 ### ------------------------------------------------------------
 ### Figures (shared look: deck colours, recessive grid, one g axis)
@@ -298,15 +298,24 @@ ggsave("figures/novel/fig3_update_before_after.png", p3, width = 9.5, height = 4
 ### ------------------------------------------------------------
 options(width = 160)
 cat("\n=== A. Reproduction (rho = 0.6) ===\n")
-print(reproduction %>% select(model, studies, k, est, ci_lo, ci_hi, pi_lo, pi_hi, tau2, max_abs_diff),
+print(plain_names(reproduction %>% select(model, studies, k, est, ci_lo, ci_hi, pi_lo, pi_hi, tau2, max_abs_diff)),
       digits = 3, row.names = FALSE)
 cat("\n=== Hao et al. (2026) effect sizes ===\n")
-print(hao_es %>% mutate(se = sqrt(var_g)) %>% select(outcome, measure, g, se), digits = 3, row.names = FALSE)
-cat("\n=== B. External test ===\n")
-print(external %>% select(prediction, parent_pi_lo, parent_pi_hi, obs_lo, obs_hi, hao_g,
-                          inside_reported_pi, inside_observed_interval), digits = 3, row.names = FALSE)
-cat("\n=== C. LOSO coverage (target ~0.90) ===\n")
-print(as.data.frame(coverage), digits = 3, row.names = FALSE)
-cat("\n=== D. Before vs after adding Hao et al. (2026) ===\n")
-print(updated %>% select(model, version, studies, k, est, ci_lo, ci_hi, pi_lo, pi_hi, tau2),
+print(plain_names(hao_es %>% mutate(se = sqrt(var_g)) %>% select(outcome, measure, g, se)),
       digits = 3, row.names = FALSE)
+cat("\n=== B. External test ===\n")
+print(plain_names(external %>% select(prediction, parent_pi_lo, parent_pi_hi, obs_lo, obs_hi, hao_g,
+                                      inside_reported_pi, inside_observed_interval)), digits = 3, row.names = FALSE)
+cat("\n=== C. LOSO coverage (target ~0.90) ===\n")
+print(plain_names(coverage), digits = 3, row.names = FALSE)
+cat("\n=== D. Before vs after adding Hao et al. (2026) ===\n")
+print(plain_names(updated %>% select(model, version, studies, k, est, ci_lo, ci_hi, pi_lo, pi_hi, tau2)),
+      digits = 3, row.names = FALSE)
+
+### The result tables left in the R session get the same plain-English
+### column names as the saved files, for View() in RStudio.
+reproduction <- plain_names(reproduction)
+external     <- plain_names(external)
+loso         <- plain_names(loso)
+coverage     <- plain_names(coverage)
+updated      <- plain_names(updated)

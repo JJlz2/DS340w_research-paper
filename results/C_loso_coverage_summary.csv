@@ -1,4 +1,4 @@
-"outcome","test_cases","held_out_studies","coverage_reported_pi","coverage_observed_interval","mean_abs_error"
+"Outcome","Test cases","Held-out studies","Coverage of published PI","Coverage of interval for observed effect","Mean absolute error"
 "CMJ",4,3,0.75,1,0.3903836921247
 "Hypertrophy",14,6,0.857142857142857,1,0.432092888278687
 "Strength",11,9,0.818181818181818,0.909090909090909,0.506746069255819

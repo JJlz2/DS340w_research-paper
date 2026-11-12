@@ -30,6 +30,11 @@ ALERTS_END = "2024/09/16"          # approximate end of the parent's search aler
 SCREENED = {"42507730": "eligible - Hao et al. (2026), added to the meta-analysis"}
 
 OUT = Path("data/processed/pubmed_update_search.csv")
+# Plain-English column names for the saved file
+PLAIN = {"pmid": "PMID", "first_author": "First author", "pub_date": "Publication date",
+         "title": "Title", "journal": "Journal", "entrez_date": "Date added to PubMed",
+         "after_parent_alerts": "Added after the parent's search alerts ended",
+         "screening_status": "Screening status"}
 
 
 def get_json(endpoint, params):
@@ -68,9 +73,9 @@ def main():
     rows.sort(key=lambda r: r["entrez_date"])
     OUT.parent.mkdir(parents=True, exist_ok=True)
     with OUT.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+        writer = csv.DictWriter(f, fieldnames=[PLAIN[k] for k in rows[0]])
         writer.writeheader()
-        writer.writerows(rows)
+        writer.writerows({PLAIN[k]: v for k, v in r.items()} for r in rows)
 
     after = sum(r["after_parent_alerts"] for r in rows)
     print(f"{len(rows)} records added to PubMed since {PARENT_SEARCH_END}; "
