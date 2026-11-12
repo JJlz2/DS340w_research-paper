@@ -1,7 +1,8 @@
 # ------------------------------------------------------------------
 # Allowlist: everything in this folder is LOCAL ONLY unless it is
 # re-included below. What gets pushed: the papers used, the datasets,
-# the figures, and the code for the parent paper.
+# the figures, the code for the parent paper, and the novel approach's
+# code, results and figures.
 # To push something else later, add a "!" line for it here.
 # ------------------------------------------------------------------
 /*
@@ -26,6 +27,7 @@
 !/data/README.md
 !/data/raw/
 !/data/splits/
+!/data/processed/
 
 # code for the parent paper
 !/code/
@@ -35,10 +37,15 @@
 !/code/generate_forest_plots.R
 !/code/generate_orchard_plot.R
 
+# novel approach: code, results and figures
+!/code/novel/
+!/results/
+
 # figures (parent paper reproduction)
 !/figures/
 /figures/*
 !/figures/Figure*.png
+!/figures/novel/
 !/figures and data/
 /figures and data/*
 !/figures and data/Orchard_strength_training_status.png

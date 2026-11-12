@@ -1,0 +1,26 @@
+"test","outcome","model","cases","mean_abs_error","coverage_90","mean_width","mean_interval_score"
+"Leave-one-study-out (9 original studies)","All outcomes","Parent meta-analysis",29,0.454656619524635,0.96551724137931,3.2122695404346,3.75142861076654
+"Leave-one-study-out (9 original studies)","All outcomes","Bayesian meta-analysis",29,0.459379857181993,0.896551724137931,2.38170226970046,3.04787026800028
+"Leave-one-study-out (9 original studies)","All outcomes","Random forest (ML)",29,0.531631010863818,0.724137931034483,1.82514348373557,4.29904545598057
+"Leave-one-study-out (9 original studies)","All outcomes","Average of other studies",29,0.462216821899091,NA,NA,NA
+"Leave-one-study-out (9 original studies)","All outcomes","Bayesian, prior scale 1.0 (sensitivity)",29,0.461099951256492,0.931034482758621,2.89596278855451,3.43667289004525
+"Leave-one-study-out (9 original studies)","Strength","Parent meta-analysis",11,0.506746069255819,0.909090909090909,2.85446949387608,4.27588886111481
+"Leave-one-study-out (9 original studies)","Strength","Bayesian meta-analysis",11,0.511166468792054,0.909090909090909,2.50423754969598,3.95489639381552
+"Leave-one-study-out (9 original studies)","Strength","Random forest (ML)",11,0.668385054079987,0.727272727272727,1.90255336382779,4.15056378695372
+"Leave-one-study-out (9 original studies)","Strength","Average of other studies",11,0.515484600444435,NA,NA,NA
+"Leave-one-study-out (9 original studies)","Strength","Bayesian, prior scale 1.0 (sensitivity)",11,0.511449826887632,0.909090909090909,2.88311759120775,4.25035809137951
+"Leave-one-study-out (9 original studies)","Hypertrophy","Parent meta-analysis",14,0.432092888278687,1,2.35139118339308,2.35139118339308
+"Leave-one-study-out (9 original studies)","Hypertrophy","Bayesian meta-analysis",14,0.43768805198578,0.857142857142857,2.13773330647283,2.37784935399996
+"Leave-one-study-out (9 original studies)","Hypertrophy","Random forest (ML)",14,0.476779026600849,0.714285714285714,1.79383273120595,4.26778282670371
+"Leave-one-study-out (9 original studies)","Hypertrophy","Average of other studies",14,0.443972728607978,NA,NA,NA
+"Leave-one-study-out (9 original studies)","Hypertrophy","Bayesian, prior scale 1.0 (sensitivity)",14,0.440081643484205,0.928571428571429,2.45115816364771,2.49694012374358
+"Leave-one-study-out (9 original studies)","CMJ","Parent meta-analysis",4,0.3903836921247,1,7.20929391811586,7.20929391811586
+"Leave-one-study-out (9 original studies)","CMJ","Bayesian meta-analysis",4,0.392887993441075,1,2.89862162100947,2.89862162100947
+"Leave-one-study-out (9 original studies)","CMJ","Random forest (ML)",4,0.347539336939741,0.75,1.72185394733559,4.81678924827345
+"Leave-one-study-out (9 original studies)","CMJ","Average of other studies",4,0.379584757418294,NA,NA,NA
+"Leave-one-study-out (9 original studies)","CMJ","Bayesian, prior scale 1.0 (sensitivity)",4,0.39620187047386,1,4.4881032684319,4.4881032684319
+"External: Hao et al. (2026)","All outcomes","Parent meta-analysis",2,1.88783175220872,0.5,3.510008895767,9.05289516005975
+"External: Hao et al. (2026)","All outcomes","Bayesian meta-analysis",2,1.8830954792209,0.5,2.74767623009948,14.2764032171587
+"External: Hao et al. (2026)","All outcomes","Random forest (ML)",2,2.17303618694748,0,2.17241581453744,26.5291109855452
+"External: Hao et al. (2026)","All outcomes","Average of other studies",2,1.90290265505246,NA,NA,NA
+"External: Hao et al. (2026)","All outcomes","Bayesian, prior scale 1.0 (sensitivity)",2,1.88375721810633,0.5,3.23313934050425,11.3968415730858

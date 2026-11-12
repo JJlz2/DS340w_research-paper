@@ -20,6 +20,10 @@ The parent paper, Amdi & King (2025), is a meta-analysis of how the duration of 
 | `figures/` | The reproduced Figures 3–5 |
 | `figures and data/` | The orchard plot, and the parent paper's Tables 1–3 as CSV |
 | `s6uqn-osfstorage-archive/` | The parent paper's original OSF materials, unmodified: datasheet, R script, pre-registration and supplementary files |
+| `code/novel/` | The novel approach, in four steps (see below) |
+| `data/processed/` | Hao et al. (2026) converted to the parent datasheet's format, and the updated PubMed search |
+| `results/` | Tables from the novel approach: reproduction check, external test, leave-one-study-out and model comparison |
+| `figures/novel/` | Figures from the novel approach |
 
 ## Reproducing the parent paper
 1. Open `DS340w_research-paper.Rproj` in RStudio. This sets the working directory to the repository root.
@@ -32,3 +36,13 @@ The parent paper, Amdi & King (2025), is a meta-analysis of how the duration of 
   - an external test on Hao et al. (2026), a trial published after the parent paper's search that meets all of its inclusion criteria;
   - leave-one-study-out on the original nine studies;
   - a refit with the new study added.
+- **Models compared on the same test cases:** the parent's multi-level meta-analysis, a Bayesian multi-level meta-analysis with half-normal priors, and a quantile regression forest (`ranger`). The plain average of the other studies is a baseline.
+
+### Running the novel approach
+Open `DS340w_research-paper.Rproj` (or work from the repository root) and run, in order:
+1. `python code/novel/01_pubmed_update_search.py`: reruns the parent paper's PubMed search for newer records (optional; needs internet). Writes `data/processed/pubmed_update_search.csv`.
+2. `code/novel/02_process_hao2026.R`: turns Hao et al.'s raw data into effect-size rows. Writes `data/processed/hao2026_rows.csv`.
+3. `code/novel/03_test_predictions.R`: reproduces the parent's results, then runs the external test, leave-one-study-out and the refit. Writes `results/A`–`D` and `figures/novel/`.
+4. `code/novel/04_compare_models.R`: compares the three models. Writes `results/E_model_comparison_*.csv`. Takes a few minutes.
+
+R packages: `readxl`, `metafor`, `clubSandwich`, `dplyr`, `ggplot2`, `ranger`.
