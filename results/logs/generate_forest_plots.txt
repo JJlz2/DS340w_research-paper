@@ -1,0 +1,4 @@
+Figure 3 (strength) written.
+Figure 4 (hypertrophy) written.
+Figure 5 (CMJ) written.
+All three forest plots written to results/figures/reproduction/

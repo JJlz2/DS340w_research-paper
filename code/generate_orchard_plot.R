@@ -15,8 +15,9 @@
 
 library(ggplot2)
 
-### Reuse every model object run_analysis.R already fits.
-source("code/run_analysis.R")
+### Reuse every model object run_analysis.R fits: run it only if this
+### session doesn't already have its models.
+if (!exists("res_pooled_str_robust")) source("code/run_analysis.R", local = TRUE)
 
 ### Robust 90% CI and 90% PI, computed exactly as in run_analysis.R
 ### (t-distribution on the robust df; PI adds the between-study variance).
@@ -83,8 +84,8 @@ p <- ggplot() +
         plot.subtitle = element_text(colour = "grey35", size = 9),
         legend.position = "bottom")
 
-out_dir <- "figures and data"
-dir.create(out_dir, showWarnings = FALSE)
+out_dir <- "results/figures/reproduction"
+dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
 ggsave(file.path(out_dir, "Orchard_strength_training_status.png"), p, width = 10.5, height = 5.4, dpi = 150, bg = "white")
 
 cat("Orchard plot written to", file.path(out_dir, "Orchard_strength_training_status.png"), "\n")

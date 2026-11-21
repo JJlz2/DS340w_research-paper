@@ -27,9 +27,14 @@
 ###
 ### Inputs:  data/raw/AK_ECC_datasheet_Kojic.xlsx   (parent dataset)
 ###          data/processed/hao2026_rows.csv        (from step 2)
-### Outputs: results/*.csv, figures/novel/*.png
+### Outputs: results/tables/reproduction/A_*.csv, results/tables/novel/B-D_*.csv,
+###          results/figures/novel/*.png
 ### Run from the repo root:  Rscript code/novel/03_test_predictions.R
 ### ============================================================
+
+if (!file.exists("data/processed/hao2026_rows.csv"))
+  stop("Run this from the repository folder (open DS340w_research-paper.Rproj in RStudio first), ",
+       "after step 2.", call. = FALSE)
 
 suppressPackageStartupMessages({
   library(readxl)
@@ -43,8 +48,8 @@ source("code/novel/meta_helpers.R")
 parent <- read_excel("data/raw/AK_ECC_datasheet_Kojic.xlsx")
 hao    <- read.csv("data/processed/hao2026_rows.csv", stringsAsFactors = FALSE)
 
-dir.create("results", showWarnings = FALSE)
-dir.create("figures/novel", showWarnings = FALSE, recursive = TRUE)
+for (d in c("results/tables/reproduction", "results/tables/novel", "results/figures/novel"))
+  dir.create(d, showWarnings = FALSE, recursive = TRUE)
 
 ### ------------------------------------------------------------
 ### Data
@@ -86,7 +91,7 @@ reproduction <- bind_rows(lapply(names(parent_models), function(nm)
   left_join(published, by = "model") %>%
   mutate(max_abs_diff = pmax(abs(est - pub_est), abs(ci_lo - pub_ci_lo), abs(ci_hi - pub_ci_hi),
                              abs(pi_lo - pub_pi_lo), abs(pi_hi - pub_pi_hi)))
-write.csv(plain_names(reproduction), "results/A_reproduction_check.csv", row.names = FALSE)
+write.csv(plain_names(reproduction), "results/tables/reproduction/A_reproduction_check.csv", row.names = FALSE)
 
 ### ------------------------------------------------------------
 ### B. External test on Hao et al. (2026)
@@ -116,7 +121,7 @@ external <- bind_rows(lapply(seq_len(nrow(tests)), function(i) {
              inside_observed_interval = new$g >= oi[["lo"]] & new$g <= oi[["hi"]],
              rope = unname(roped[tests$outcome[i]]))
 }))
-write.csv(plain_names(external), "results/B_external_test_hao2026.csv", row.names = FALSE)
+write.csv(plain_names(external), "results/tables/novel/B_external_test_hao2026.csv", row.names = FALSE)
 
 ### ------------------------------------------------------------
 ### C. Leave-one-study-out on the original nine studies
@@ -144,7 +149,7 @@ loso <- bind_rows(loso_outcome(str_parent, "Strength"),
   mutate(error = observed_g - predicted,
          inside_reported_pi = observed_g >= pi_lo & observed_g <= pi_hi,
          inside_observed_interval = observed_g >= obs_lo & observed_g <= obs_hi)
-write.csv(plain_names(loso), "results/C_loso_predictions.csv", row.names = FALSE)
+write.csv(plain_names(loso), "results/tables/novel/C_loso_predictions.csv", row.names = FALSE)
 
 coverage <- loso %>%
   group_by(outcome) %>%
@@ -157,7 +162,7 @@ coverage <- loso %>%
                                coverage_reported_pi = mean(inside_reported_pi),
                                coverage_observed_interval = mean(inside_observed_interval),
                                mean_abs_error = mean(abs(error))))
-write.csv(plain_names(coverage), "results/C_loso_coverage_summary.csv", row.names = FALSE)
+write.csv(plain_names(coverage), "results/tables/novel/C_loso_coverage_summary.csv", row.names = FALSE)
 
 ### ------------------------------------------------------------
 ### D. Update: add Hao et al. (2026) and refit
@@ -174,7 +179,7 @@ updated <- bind_rows(
     cbind(model = nm, version = "Updated (+ Hao 2026)", fit_meta(subgroups[[nm]](str_updated))))),
   cbind(model = "CMJ: all studies", version = "Parent (9 studies)", parent_models[["CMJ: all studies"]]),
   cbind(model = "CMJ: all studies", version = "Updated (+ Hao 2026)", fit_meta(cmj_updated)))
-write.csv(plain_names(updated), "results/D_update_before_after.csv", row.names = FALSE)
+write.csv(plain_names(updated), "results/tables/novel/D_update_before_after.csv", row.names = FALSE)
 
 ### ------------------------------------------------------------
 ### Figures (shared look: deck colours, recessive grid, one g axis)
@@ -239,7 +244,7 @@ p1 <- ggplot() +
   labs(x = "Hedges' g   (negative favours the shorter eccentric phase, positive the longer)", y = NULL) +
   theme_deck() +
   theme(legend.box = "vertical", legend.spacing.y = unit(2, "pt"))
-ggsave("figures/novel/fig1_external_test_hao2026.png", p1, width = 9.5, height = 5.6, dpi = 200, bg = "white")
+ggsave("results/figures/novel/fig1_external_test_hao2026.png", p1, width = 9.5, height = 5.6, dpi = 200, bg = "white")
 
 ### Figure 2: LOSO, each held-out effect against its predicted range
 f2 <- loso %>%
@@ -249,28 +254,31 @@ f2 <- loso %>%
          outcome = factor(outcome, levels = c("Strength", "Hypertrophy", "CMJ"))) %>%
   group_by(outcome) %>% arrange(observed_g, .by_group = TRUE) %>%
   mutate(case = factor(case, levels = unique(case))) %>% ungroup()
-p2 <- ggplot(f2, aes(y = case)) +
-  geom_vline(xintercept = 0, colour = "#9CA3AF", linewidth = 0.4, linetype = "dashed") +
-  geom_segment(aes(x = obs_lo, xend = obs_hi, yend = case),
-               colour = col_parent, linewidth = 0.9, alpha = 0.55, lineend = "round") +
-  geom_point(aes(x = observed_g, shape = result, colour = result), size = 2.8, stroke = 1.1) +
-  scale_shape_manual(values = c("Inside predicted range" = 16, "Outside predicted range" = 4)) +
-  scale_colour_manual(values = c("Inside predicted range" = ink, "Outside predicted range" = col_new)) +
-  scale_x_continuous(breaks = seq(-5, 3, 1)) +
+loso_plot <- function(d) {
+  ggplot(d, aes(y = case)) +
+    geom_vline(xintercept = 0, colour = "#9CA3AF", linewidth = 0.4, linetype = "dashed") +
+    geom_segment(aes(x = obs_lo, xend = obs_hi, yend = case),
+                 colour = col_parent, linewidth = 0.9, alpha = 0.55, lineend = "round") +
+    geom_point(aes(x = observed_g, shape = result, colour = result), size = 2.8, stroke = 1.1) +
+    scale_shape_manual(values = c("Inside predicted range" = 16, "Outside predicted range" = 4)) +
+    scale_colour_manual(values = c("Inside predicted range" = ink, "Outside predicted range" = col_new)) +
+    scale_x_continuous(breaks = seq(-5, 3, 1))
+}
+p2 <- loso_plot(f2) +
   facet_grid(outcome ~ ., scales = "free_y", space = "free_y") +
   labs(x = "Hedges' g of the held-out study (dot) vs. the 90% range predicted from the other studies (bar)",
        y = NULL) +
   theme_deck() +
   theme(axis.text.y = element_text(size = 11),
         strip.text.y = element_text(angle = 0, hjust = 0))
-ggsave("figures/novel/fig2_loso_coverage.png", p2, width = 10, height = 8, dpi = 200, bg = "white")
+ggsave("results/figures/novel/fig2_loso_coverage.png", p2, width = 10, height = 8, dpi = 200, bg = "white")
 
 ### Figure 2b: the strength panel on its own, sized for a slide
-p2b <- p2 %+% filter(f2, outcome == "Strength") +
-  facet_null() +
-  labs(x = "Hedges' g: held-out study (dot) vs. 90% range predicted without it (bar)") +
+p2b <- loso_plot(filter(f2, outcome == "Strength")) +
+  labs(x = "Hedges' g: held-out study (dot) vs. 90% range predicted without it (bar)", y = NULL) +
+  theme_deck() +
   theme(axis.text.y = element_text(size = 13))
-ggsave("figures/novel/fig2b_loso_strength.png", p2b, width = 9, height = 5.4, dpi = 200, bg = "white")
+ggsave("results/figures/novel/fig2b_loso_strength.png", p2b, width = 9, height = 5.4, dpi = 200, bg = "white")
 
 ### Figure 3: before vs after adding the new study
 f3 <- updated %>%
@@ -291,7 +299,7 @@ p3 <- ggplot(f3, aes(colour = version)) +
   scale_y_continuous(breaks = 1:4, labels = levels(f3$label), expand = expansion(add = 0.5)) +
   labs(x = "Pooled Hedges' g   (thick bar: 90% CI, thin bar: 90% PI)", y = NULL) +
   theme_deck()
-ggsave("figures/novel/fig3_update_before_after.png", p3, width = 9.5, height = 4.8, dpi = 200, bg = "white")
+ggsave("results/figures/novel/fig3_update_before_after.png", p3, width = 9.5, height = 4.8, dpi = 200, bg = "white")
 
 ### ------------------------------------------------------------
 ### Console summary

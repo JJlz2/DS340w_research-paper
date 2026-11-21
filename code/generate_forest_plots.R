@@ -16,13 +16,13 @@
 
 library(metafor)
 
-### Reuse every object already computed by the reproduction script -
-### source it once to populate this session. (This also reproduces
-### its own funnel/diagnostic plots to a stray Rplots.pdf, which is
-### gitignored and harmless.)
-source("code/run_analysis.R")
+### Reuse every object computed by the authors' script: run it only if
+### this session doesn't already have its models (code/novel/run_all.R
+### runs it first and saves its diagnostic plots to
+### results/figures/reproduction/parent_diagnostic_plots.pdf).
+if (!exists("res_pooled_str_robust")) source("code/run_analysis.R", local = TRUE)
 
-dir.create("figures", showWarnings = FALSE)
+dir.create("results/figures/reproduction", showWarnings = FALSE, recursive = TRUE)
 
 ### 90% CI for a clubSandwich-robust rma.mv model, computed exactly
 ### as run_analysis.R does throughout (t-distribution, robust df).
@@ -73,7 +73,7 @@ ut_ci      <- robust_ci90(res_ut_robust)
 t_ci       <- robust_ci90(res_t_robust)
 overall_ci <- robust_ci90(res_pooled_str_robust)
 
-png("figures/Figure3_strength_forest.png", width = 1400, height = 1100, res = 130)
+png("results/figures/reproduction/Figure3_strength_forest.png", width = 1400, height = 1100, res = 130)
 par(mar = c(4, 4, 1, 2))
 
 forest(x = all_dat$g, vi = all_dat$var_g,
@@ -135,7 +135,7 @@ within_ci  <- robust_ci90(res_within_hyp_robust)
 between_ci <- robust_ci90(res_between_hyp_robust)
 overall_hyp_ci <- robust_ci90(res_pooled_hyp_robust)
 
-png("figures/Figure4_hypertrophy_forest.png", width = 1400, height = 1300, res = 130)
+png("results/figures/reproduction/Figure4_hypertrophy_forest.png", width = 1400, height = 1300, res = 130)
 par(mar = c(4, 4, 1, 2))
 
 forest(x = all_hyp$g, vi = all_hyp$var_g,
@@ -192,7 +192,7 @@ row_overall_pow <- min(rows_pow) - 2
 
 overall_pow_ci <- robust_ci90(res_pow_robust)
 
-png("figures/Figure5_CMJ_forest.png", width = 1300, height = 650, res = 130)
+png("results/figures/reproduction/Figure5_CMJ_forest.png", width = 1300, height = 650, res = 130)
 par(mar = c(4, 4, 1, 2))
 
 forest(x = pow_dat$g, vi = pow_dat$var_g,
@@ -222,4 +222,4 @@ abline(v = c(-0.11, 0.11), col = "red", lty = 2)
 dev.off()
 
 cat("Figure 5 (CMJ) written.\n")
-cat("All three forest plots written to figures/\n")
+cat("All three forest plots written to results/figures/reproduction/\n")

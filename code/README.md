@@ -32,6 +32,17 @@ equations, or model specifications were touched.
 Open `DS340w_research-paper.Rproj` in RStudio (this sets the working directory
 to the repo root automatically), then open and source `code/run_analysis.R`.
 Required packages: `readxl`, `metafor`, `clubSandwich`, `tidyverse`, `dplyr`.
+The script prints its results to the console and draws its diagnostic plots
+(Cook's distance, leverage, funnel plots) in the Plots pane.
+
+`generate_forest_plots.R` and `generate_orchard_plot.R` draw the figures from
+its fitted models (they run it first if it hasn't been run in the session) and
+save them to `results/figures/reproduction/`.
+
+`code/novel/run_all.R` runs all three as Part 1 of the whole pipeline. There,
+the authors' printed output is saved to `results/logs/run_analysis.txt` and
+their diagnostic plots to
+`results/figures/reproduction/parent_diagnostic_plots.pdf`.
 
 ## Verification
 

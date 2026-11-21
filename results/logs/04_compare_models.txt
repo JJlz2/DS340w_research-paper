@@ -1,8 +1,4 @@
-Warning messages:
-1: package 'metafor' was built under R version 4.4.3 
-2: package 'metadat' was built under R version 4.4.3 
-3: package 'clubSandwich' was built under R version 4.4.3 
-4: package 'ranger' was built under R version 4.4.3 
+Warning: package 'ranger' was built under R version 4.4.3 
 
 === Check: Bayesian likelihood vs the authors' REML fit ===
      Outcome Authors' model: pooled g Bayesian code without priors: pooled g Authors' model: between-trial variance

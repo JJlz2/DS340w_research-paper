@@ -31,8 +31,15 @@
 ### Output: data/processed/hao2026_rows.csv
 ### ============================================================
 
-library(readxl)
-library(dplyr)
+if (!file.exists("data/raw/Hao2026_pone.0354725.s001.xlsx"))
+  stop("Run this from the repository folder: open DS340w_research-paper.Rproj in RStudio first.",
+       call. = FALSE)
+
+suppressPackageStartupMessages({
+  library(readxl)
+  library(dplyr)
+  library(tidyr)
+})
 
 raw <- read_excel("data/raw/Hao2026_pone.0354725.s001.xlsx",
                   sheet = "Lower Limb Strength Indices",

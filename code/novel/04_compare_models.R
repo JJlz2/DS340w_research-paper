@@ -32,9 +32,13 @@
 ### (e.g. trained only) are in step 3's output B.
 ###
 ### Inputs:  as step 3
-### Outputs: results/E_model_comparison_*.csv
+### Outputs: results/tables/novel/E_model_comparison_*.csv
 ### Run from the repo root:  Rscript code/novel/04_compare_models.R
 ### ============================================================
+
+if (!file.exists("data/processed/hao2026_rows.csv"))
+  stop("Run this from the repository folder (open DS340w_research-paper.Rproj in RStudio first), ",
+       "after step 2.", call. = FALSE)
 
 suppressPackageStartupMessages({
   library(readxl)
@@ -196,7 +200,7 @@ predictions <- bind_rows(loso, external) %>%
          inside = observed_g >= lo & observed_g <= hi,
          width = hi - lo,
          interval_score = interval_score(observed_g, lo, hi))
-write.csv(plain_names(predictions), "results/E_model_comparison_predictions.csv", row.names = FALSE)
+write.csv(plain_names(predictions), "results/tables/novel/E_model_comparison_predictions.csv", row.names = FALSE)
 
 score <- function(d) {
   d %>% summarise(cases = n(),
@@ -210,7 +214,7 @@ summary_tbl <- bind_rows(
   predictions %>% filter(test == first(loso$test)) %>% group_by(test, outcome, model) %>% score()) %>%
   select(test, outcome, everything()) %>%
   arrange(desc(test), factor(outcome, levels = c("All outcomes", names(outcomes))), model)
-write.csv(plain_names(summary_tbl), "results/E_model_comparison_summary.csv", row.names = FALSE)
+write.csv(plain_names(summary_tbl), "results/tables/novel/E_model_comparison_summary.csv", row.names = FALSE)
 
 ### ------------------------------------------------------------
 ### Check: with the priors removed, the Bayesian code's likelihood

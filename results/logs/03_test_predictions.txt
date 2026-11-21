@@ -1,11 +1,3 @@
-Warning messages:
-1: package 'metafor' was built under R version 4.4.3 
-2: package 'metadat' was built under R version 4.4.3 
-3: package 'clubSandwich' was built under R version 4.4.3 
-4: package 'ggplot2' was built under R version 4.4.3 
-Warning message:
-<ggplot> %+% x was deprecated in ggplot2 4.0.0.
-ℹ Please use <ggplot> + x instead. 
 
 === A. Reproduction (rho = 0.6) ===
                      Model Studies Effect sizes Pooled g 90% CI lower 90% CI upper 90% PI lower 90% PI upper Between-trial variance

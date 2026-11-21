@@ -16,4 +16,4 @@
 
 That is 6 / 2 / 1 of the 9 studies (67% / 22% / 11%).
 
-The parent paper's Tables 1–3 are also saved as CSV in `../figures and data/`.
+The parent paper's published Tables 1–3 are saved as CSV in `parent_paper_tables/` (reference only; no code reads them).

@@ -1,0 +1,990 @@
+Warning: package 'metafor' was built under R version 4.4.3 
+Loading required package: Matrix
+Loading required package: metadat
+Warning: package 'metadat' was built under R version 4.4.3 
+Loading required package: numDeriv
+
+Loading the 'metafor' package (version 4.8-0). For an
+introduction to the package please type: help(metafor)
+
+Warning: package 'clubSandwich' was built under R version 4.4.3 
+Warning: package 'ggplot2' was built under R version 4.4.3 
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   4.0.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.0.4     ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ tidyr::expand() masks Matrix::expand()
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+✖ tidyr::pack()   masks Matrix::pack()
+✖ tidyr::unpack() masks Matrix::unpack()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+   pred     se   ci.lb  ci.ub   pi.lb  pi.ub intrcpt 
+ 0.3107 0.3156 -0.4628 1.0842 -1.5948 2.2163       1 
+
+90% Prediction Interval: [ -1.201898 ,  1.823374 ]
+
+          estimate  ci.lb  ci.ub 
+sigma^2.1   0.5049 0.0000 2.6836 
+sigma.1     0.7106 0.0000 1.6382 
+
+          estimate  ci.lb  ci.ub 
+sigma^2.2   0.0000 0.0000 0.9328 
+sigma.2     0.0000 0.0000 0.9658 
+
+
+   pred     se   ci.lb  ci.ub   pi.lb  pi.ub intrcpt 
+ 0.1115 0.1006 -1.1661 1.3891 -1.1661 1.3891       1 
+
+90% Prediction Interval: [ -0.5233565 ,  0.7463545 ]
+
+          estimate  ci.lb  ci.ub 
+sigma^2.1   0.0000 0.0000 4.5279 
+sigma.1     0.0000 0.0000 2.1279 
+
+          estimate  ci.lb  ci.ub 
+sigma^2.2   0.0000 0.0000 4.5279 
+sigma.2     0.0000 0.0000 2.1279 
+
+
+   pred     se   ci.lb  ci.ub   pi.lb  pi.ub intrcpt 
+ 0.2513 0.2246 -0.2689 0.7716 -1.1176 1.6203       1 
+
+90% Prediction Interval: [ -0.8513206 ,  1.353981 ]
+
+          estimate  ci.lb  ci.ub 
+sigma^2.1   0.2988 0.0000 1.4498 
+sigma.1     0.5467 0.0000 1.2041 
+
+          estimate  ci.lb  ci.ub 
+sigma^2.2   0.0000 0.0000 0.6902 
+sigma.2     0.0000 0.0000 0.8308 
+
+
+   pred     se   ci.lb  ci.ub   pi.lb  pi.ub intrcpt 
+ 0.1518 0.4429 -1.0799 1.3834 -2.6502 2.9538       1 
+
+90% Prediction Interval: [ -1.998723 ,  2.302266 ]
+
+          estimate  ci.lb  ci.ub 
+sigma^2.1   0.8190 0.0000 6.0216 
+sigma.1     0.9050 0.0000 2.4539 
+
+          estimate  ci.lb  ci.ub 
+sigma^2.2   0.0000 0.0000 2.4629 
+sigma.2     0.0000 0.0000 1.5694 
+
+
+   pred     se   ci.lb  ci.ub   pi.lb  pi.ub intrcpt 
+ 0.3397 0.0984 -0.0382 0.7175 -0.0382 0.7175       1 
+
+90% Prediction Interval: [ 0.07464803 ,  0.6046543 ]
+
+          estimate  ci.lb  ci.ub 
+sigma^2.1   0.0000 0.0000 0.4822 
+sigma.1     0.0000 0.0000 0.6944 
+
+          estimate  ci.lb  ci.ub 
+sigma^2.2   0.0000 0.0000 0.3103 
+sigma.2     0.0000 0.0000 0.5571 
+
+
+   pred     se   ci.lb  ci.ub   pi.lb  pi.ub intrcpt 
+ 0.0875 0.3767 -0.9597 1.1347 -2.2157 2.3907       1 
+
+90% Prediction Interval: [ -1.680374 ,  1.855311 ]
+
+          estimate  ci.lb  ci.ub 
+sigma^2.1   0.5445 0.0000 4.3330 
+sigma.1     0.7379 0.0000 2.0816 
+
+          estimate  ci.lb  ci.ub 
+sigma^2.2   0.0000 0.0000 0.9940 
+sigma.2     0.0000 0.0000 0.9970 
+
+
+   pred     se   ci.lb  ci.ub   pi.lb  pi.ub intrcpt 
+ 0.3987 0.2537 -0.4682 1.2655 -1.1006 1.8979       1 
+
+90% Prediction Interval: [ -0.688161 ,  1.485479 ]
+
+          estimate  ci.lb  ci.ub 
+sigma^2.1   0.0641 0.0000 2.4813 
+sigma.1     0.2532 0.0000 1.5752 
+
+          estimate  ci.lb  ci.ub 
+sigma^2.2   0.0641 0.0000 2.4813 
+sigma.2     0.2532 0.0000 1.5752 
+
+
+   pred     se   ci.lb  ci.ub   pi.lb  pi.ub intrcpt 
+ 0.2467 0.0858 -0.0524 0.5458 -0.0524 0.5458       1 
+
+90% Prediction Interval: [ 0.031171 ,  0.4622504 ]
+
+          estimate  ci.lb  ci.ub 
+sigma^2.1   0.0000 0.0000 0.4392 
+sigma.1     0.0000 0.0000 0.6627 
+
+          estimate  ci.lb  ci.ub 
+sigma^2.2   0.0000 0.0000 0.2049 
+sigma.2     0.0000 0.0000 0.4526 
+
+
+   pred     se   ci.lb  ci.ub   pi.lb  pi.ub intrcpt 
+ 0.2618 0.4630 -1.0264 1.5499 -2.6378 3.1613       1 
+
+90% Prediction Interval: [ -1.963327 ,  2.486852 ]
+
+          estimate  ci.lb  ci.ub 
+sigma^2.1   0.4358 0.0000 6.3319 
+sigma.1     0.6602 0.0000 2.5163 
+
+          estimate  ci.lb  ci.ub 
+sigma^2.2   0.4358 0.0000 6.3319 
+sigma.2     0.6602 0.0000 2.5163 
+
+[1] 0.7493807
+Average hat value: 0.1818182 
+Threshold for high leverage points: 0.3636364 
+
+   pred     se   ci.lb  ci.ub   pi.lb  pi.ub intrcpt 
+ 0.1572 0.2969 -0.8491 1.1634 -1.8005 2.1148       1 
+
+90% Prediction Interval: [ -1.265159 ,  1.579493 ]
+
+          estimate  ci.lb  ci.ub 
+sigma^2.1   0.1374 0.0000 3.4244 
+sigma.1     0.3707 0.0000 1.8505 
+
+          estimate  ci.lb  ci.ub 
+sigma^2.2   0.1081 0.0000 0.9291 
+sigma.2     0.3288 0.0000 0.9639 
+
+
+   pred     se   ci.lb  ci.ub   pi.lb  pi.ub intrcpt 
+ 0.0077 0.1315 -1.6638 1.6792 -1.6638 1.6792       1 
+
+90% Prediction Interval: [ -0.8228609 ,  0.8382576 ]
+
+          estimate  ci.lb  ci.ub 
+sigma^2.1   0.0000 0.0000 4.5381 
+sigma.1     0.0000 0.0000 2.1303 
+
+          estimate  ci.lb  ci.ub 
+sigma^2.2   0.0000 0.0000 0.2208 
+sigma.2     0.0000 0.0000 0.4699 
+
+
+   pred     se   ci.lb  ci.ub   pi.lb  pi.ub intrcpt 
+ 0.0374 0.1190 -0.3112 0.3860 -0.4514 0.5262       1 
+
+90% Prediction Interval: [ -0.3324439 ,  0.4072711 ]
+
+          estimate  ci.lb  ci.ub 
+sigma^2.1   0.0000 0.0000 0.6353 
+sigma.1     0.0000 0.0000 0.7970 
+
+          estimate  ci.lb  ci.ub 
+sigma^2.2   0.0137 0.0000 0.2643 
+sigma.2     0.1169 0.0000 0.5141 
+
+
+   pred     se   ci.lb  ci.ub   pi.lb  pi.ub intrcpt 
+ 0.0255 0.1481 -0.5135 0.5644 -0.7959 0.8469       1 
+
+90% Prediction Interval: [ -0.5594211 ,  0.610388 ]
+
+          estimate  ci.lb  ci.ub 
+sigma^2.1   0.0000 0.0000 0.7680 
+sigma.1     0.0000 0.0000 0.8763 
+
+          estimate  ci.lb  ci.ub 
+sigma^2.2   0.0290 0.0000 0.3436 
+sigma.2     0.1704 0.0000 0.5862 
+
+
+   pred     se   ci.lb  ci.ub    pi.lb   pi.ub intrcpt 
+ 0.4612 0.6815 -8.1976 9.1200 -13.5637 14.4861       1 
+
+90% Prediction Interval: [ -6.507828 ,  7.430216 ]
+
+          estimate  ci.lb    ci.ub 
+sigma^2.1   0.7540 0.0000 >75.3953 
+sigma.1     0.8683 0.0000  >8.6830 
+
+          estimate  ci.lb  ci.ub 
+sigma^2.2   0.0000 0.0000 2.2090 
+sigma.2     0.0000 0.0000 1.4863 
+
+
+   pred     se   ci.lb  ci.ub   pi.lb  pi.ub intrcpt 
+ 0.2878 0.3591 -1.4027 1.9784 -2.5627 3.1383       1 
+
+90% Prediction Interval: [ -1.597045 ,  2.172726 ]
+
+          estimate  ci.lb  ci.ub 
+sigma^2.1   0.2377 0.0000 7.9991 
+sigma.1     0.4875 0.0000 2.8283 
+
+          estimate  ci.lb  ci.ub 
+sigma^2.2   0.0000 0.0000 1.2572 
+sigma.2     0.0000 0.0000 1.1213 
+
+
+    pred     se   ci.lb  ci.ub   pi.lb  pi.ub intrcpt 
+ -0.0013 0.1799 -0.8405 0.8378 -1.3101 1.3075       1 
+
+90% Prediction Interval: [ -0.8690363 ,  0.8663704 ]
+
+          estimate  ci.lb  ci.ub 
+sigma^2.1   0.0079 0.0000 1.9203 
+sigma.1     0.0891 0.0000 1.3857 
+
+          estimate  ci.lb  ci.ub 
+sigma^2.2   0.0384 0.0000 0.4178 
+sigma.2     0.1960 0.0000 0.6464 
+
+[1] 0.7347723
+Average hat value: 0.1428571 
+Threshold for high leverage points: 0.2857143 
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 0.962744
+  Scaled convergence tolerance is 1.4346e-08
+Stepsize computed as 0.690776
+BUILD              7 0.967625 0.962744
+EXTENSION          9 0.964200 0.959657
+LO-REDUCTION      11 0.962744 0.959657
+LO-REDUCTION      13 0.962744 0.959657
+LO-REDUCTION      15 0.962744 0.959657
+EXTENSION         17 0.962744 0.958512
+LO-REDUCTION      19 0.962744 0.958512
+EXTENSION         21 0.960380 0.957523
+LO-REDUCTION      23 0.960295 0.957523
+LO-REDUCTION      25 0.959853 0.957523
+LO-REDUCTION      27 0.959657 0.957523
+EXTENSION         29 0.958512 0.956821
+LO-REDUCTION      31 0.958512 0.956821
+LO-REDUCTION      33 0.958298 0.956821
+LO-REDUCTION      35 0.957863 0.956821
+LO-REDUCTION      37 0.957787 0.956821
+EXTENSION         39 0.957523 0.956525
+LO-REDUCTION      41 0.957267 0.956525
+LO-REDUCTION      43 0.957140 0.956525
+EXTENSION         45 0.956865 0.956418
+LO-REDUCTION      47 0.956844 0.956418
+EXTENSION         49 0.956821 0.956394
+LO-REDUCTION      51 0.956585 0.956394
+EXTENSION         53 0.956529 0.956386
+LO-REDUCTION      55 0.956525 0.956386
+EXTENSION         57 0.956446 0.956385
+LO-REDUCTION      59 0.956418 0.956385
+EXTENSION         61 0.956395 0.956385
+LO-REDUCTION      63 0.956394 0.956385
+EXTENSION         65 0.956387 0.956385
+LO-REDUCTION      67 0.956386 0.956385
+EXTENSION         69 0.956385 0.956385
+LO-REDUCTION      71 0.956385 0.956385
+Exiting from Nelder Mead minimizer
+    73 function evaluations used
+
+    pred     se   ci.lb  ci.ub   pi.lb  pi.ub intrcpt 
+ -0.7260 0.1987 -1.6065 0.1546 -1.6065 0.1546       1 
+
+90% Prediction Interval: [ -1.318456 ,  -0.1335067 ]
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 0.961292
+  Scaled convergence tolerance is 1.43244e-08
+Stepsize computed as 0.690776
+BUILD              7 0.966158 0.961292
+EXTENSION          9 0.961292 0.957619
+LO-REDUCTION      11 0.961292 0.957619
+LO-REDUCTION      13 0.961292 0.957619
+LO-REDUCTION      15 0.961292 0.957619
+LO-REDUCTION      17 0.961292 0.957619
+EXTENSION         19 0.961292 0.956939
+LO-REDUCTION      21 0.959483 0.956939
+EXTENSION         23 0.959043 0.956582
+LO-REDUCTION      25 0.958551 0.956582
+EXTENSION         27 0.958034 0.956422
+LO-REDUCTION      29 0.957619 0.956422
+EXTENSION         31 0.956939 0.956388
+LO-REDUCTION      33 0.956939 0.956388
+EXTENSION         35 0.956627 0.956385
+LO-REDUCTION      37 0.956582 0.956385
+EXTENSION         39 0.956438 0.956385
+LO-REDUCTION      41 0.956422 0.956385
+EXTENSION         43 0.956395 0.956385
+LO-REDUCTION      45 0.956388 0.956385
+EXTENSION         47 0.956385 0.956385
+LO-REDUCTION      49 0.956385 0.956385
+Exiting from Nelder Mead minimizer
+    51 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 4.223502
+  Scaled convergence tolerance is 6.29351e-08
+Stepsize computed as 0.690776
+BUILD              7 4.227805 4.223502
+EXTENSION          9 4.223502 4.220241
+LO-REDUCTION      11 4.223502 4.220241
+LO-REDUCTION      13 4.223502 4.220241
+LO-REDUCTION      15 4.223502 4.220241
+LO-REDUCTION      17 4.223502 4.220241
+EXTENSION         19 4.223502 4.219636
+LO-REDUCTION      21 4.221897 4.219636
+EXTENSION         23 4.221506 4.219318
+LO-REDUCTION      25 4.221070 4.219318
+EXTENSION         27 4.220610 4.219175
+LO-REDUCTION      29 4.220241 4.219175
+EXTENSION         31 4.219636 4.219146
+LO-REDUCTION      33 4.219636 4.219146
+EXTENSION         35 4.219358 4.219143
+LO-REDUCTION      37 4.219318 4.219143
+EXTENSION         39 4.219190 4.219143
+LO-REDUCTION      41 4.219175 4.219143
+EXTENSION         43 4.219152 4.219143
+LO-REDUCTION      45 4.219146 4.219143
+EXTENSION         47 4.219143 4.219143
+LO-REDUCTION      49 4.219143 4.219143
+Exiting from Nelder Mead minimizer
+    51 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 0.961292
+  Scaled convergence tolerance is 1.43244e-08
+Stepsize computed as 0.690776
+BUILD              7 0.966158 0.961292
+EXTENSION          9 0.961292 0.957619
+LO-REDUCTION      11 0.961292 0.957619
+LO-REDUCTION      13 0.961292 0.957619
+LO-REDUCTION      15 0.961292 0.957619
+LO-REDUCTION      17 0.961292 0.957619
+EXTENSION         19 0.961292 0.956939
+LO-REDUCTION      21 0.959483 0.956939
+EXTENSION         23 0.959043 0.956582
+LO-REDUCTION      25 0.958551 0.956582
+EXTENSION         27 0.958034 0.956422
+LO-REDUCTION      29 0.957619 0.956422
+EXTENSION         31 0.956939 0.956388
+LO-REDUCTION      33 0.956939 0.956388
+EXTENSION         35 0.956627 0.956385
+LO-REDUCTION      37 0.956582 0.956385
+EXTENSION         39 0.956438 0.956385
+LO-REDUCTION      41 0.956422 0.956385
+EXTENSION         43 0.956395 0.956385
+LO-REDUCTION      45 0.956388 0.956385
+EXTENSION         47 0.956385 0.956385
+LO-REDUCTION      49 0.956385 0.956385
+Exiting from Nelder Mead minimizer
+    51 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 4.223502
+  Scaled convergence tolerance is 6.29351e-08
+Stepsize computed as 0.690776
+BUILD              7 4.227805 4.223502
+EXTENSION          9 4.223502 4.220241
+LO-REDUCTION      11 4.223502 4.220241
+LO-REDUCTION      13 4.223502 4.220241
+LO-REDUCTION      15 4.223502 4.220241
+LO-REDUCTION      17 4.223502 4.220241
+EXTENSION         19 4.223502 4.219636
+LO-REDUCTION      21 4.221897 4.219636
+EXTENSION         23 4.221506 4.219318
+LO-REDUCTION      25 4.221070 4.219318
+EXTENSION         27 4.220610 4.219175
+LO-REDUCTION      29 4.220241 4.219175
+EXTENSION         31 4.219636 4.219146
+LO-REDUCTION      33 4.219636 4.219146
+EXTENSION         35 4.219358 4.219143
+LO-REDUCTION      37 4.219318 4.219143
+EXTENSION         39 4.219190 4.219143
+LO-REDUCTION      41 4.219175 4.219143
+EXTENSION         43 4.219152 4.219143
+LO-REDUCTION      45 4.219146 4.219143
+EXTENSION         47 4.219143 4.219143
+LO-REDUCTION      49 4.219143 4.219143
+Exiting from Nelder Mead minimizer
+    51 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 3.715937
+  Scaled convergence tolerance is 5.53718e-08
+Stepsize computed as 0.690776
+BUILD              7 3.720293 3.715937
+EXTENSION          9 3.715937 3.712636
+LO-REDUCTION      11 3.715937 3.712636
+LO-REDUCTION      13 3.715937 3.712636
+LO-REDUCTION      15 3.715937 3.712636
+LO-REDUCTION      17 3.715937 3.712636
+EXTENSION         19 3.715937 3.712024
+LO-REDUCTION      21 3.714313 3.712024
+EXTENSION         23 3.713917 3.711703
+LO-REDUCTION      25 3.713475 3.711703
+EXTENSION         27 3.713010 3.711558
+LO-REDUCTION      29 3.712636 3.711558
+EXTENSION         31 3.712024 3.711528
+LO-REDUCTION      33 3.712024 3.711528
+EXTENSION         35 3.711743 3.711525
+LO-REDUCTION      37 3.711703 3.711525
+EXTENSION         39 3.711572 3.711525
+LO-REDUCTION      41 3.711558 3.711525
+EXTENSION         43 3.711534 3.711525
+LO-REDUCTION      45 3.711528 3.711525
+EXTENSION         47 3.711525 3.711525
+LO-REDUCTION      49 3.711525 3.711525
+Exiting from Nelder Mead minimizer
+    51 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 3.075348
+  Scaled convergence tolerance is 4.58263e-08
+Stepsize computed as 0.690776
+BUILD              7 3.079822 3.075348
+EXTENSION          9 3.075348 3.071959
+LO-REDUCTION      11 3.075348 3.071959
+LO-REDUCTION      13 3.075348 3.071959
+LO-REDUCTION      15 3.075348 3.071959
+LO-REDUCTION      17 3.075348 3.071959
+EXTENSION         19 3.075348 3.071329
+LO-REDUCTION      21 3.073680 3.071329
+EXTENSION         23 3.073274 3.070999
+LO-REDUCTION      25 3.072820 3.070999
+EXTENSION         27 3.072342 3.070851
+LO-REDUCTION      29 3.071959 3.070851
+EXTENSION         31 3.071329 3.070820
+LO-REDUCTION      33 3.071329 3.070820
+EXTENSION         35 3.071041 3.070817
+LO-REDUCTION      37 3.070999 3.070817
+EXTENSION         39 3.070866 3.070817
+LO-REDUCTION      41 3.070851 3.070817
+EXTENSION         43 3.070826 3.070817
+LO-REDUCTION      45 3.070820 3.070817
+EXTENSION         47 3.070817 3.070817
+LO-REDUCTION      49 3.070817 3.070817
+Exiting from Nelder Mead minimizer
+    51 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 2.834656
+  Scaled convergence tolerance is 4.22397e-08
+Stepsize computed as 0.690776
+BUILD              7 2.839198 2.834656
+EXTENSION          9 2.834656 2.831216
+LO-REDUCTION      11 2.834656 2.831216
+LO-REDUCTION      13 2.834656 2.831216
+LO-REDUCTION      15 2.834656 2.831216
+LO-REDUCTION      17 2.834656 2.831216
+EXTENSION         19 2.834656 2.830577
+LO-REDUCTION      21 2.832963 2.830577
+EXTENSION         23 2.832551 2.830243
+LO-REDUCTION      25 2.832090 2.830243
+EXTENSION         27 2.831605 2.830092
+LO-REDUCTION      29 2.831216 2.830092
+EXTENSION         31 2.830577 2.830061
+LO-REDUCTION      33 2.830577 2.830061
+EXTENSION         35 2.830285 2.830057
+LO-REDUCTION      37 2.830243 2.830057
+EXTENSION         39 2.830107 2.830057
+LO-REDUCTION      41 2.830092 2.830057
+EXTENSION         43 2.830067 2.830057
+LO-REDUCTION      45 2.830061 2.830057
+EXTENSION         47 2.830058 2.830057
+LO-REDUCTION      49 2.830057 2.830057
+Exiting from Nelder Mead minimizer
+    51 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 2.886464
+  Scaled convergence tolerance is 4.30117e-08
+Stepsize computed as 0.690776
+BUILD              7 2.890989 2.886464
+EXTENSION          9 2.886464 2.883035
+LO-REDUCTION      11 2.886464 2.883035
+LO-REDUCTION      13 2.886464 2.883035
+LO-REDUCTION      15 2.886464 2.883035
+LO-REDUCTION      17 2.886464 2.883035
+EXTENSION         19 2.886464 2.882399
+LO-REDUCTION      21 2.884776 2.882399
+EXTENSION         23 2.884365 2.882065
+LO-REDUCTION      25 2.883906 2.882065
+EXTENSION         27 2.883423 2.881915
+LO-REDUCTION      29 2.883035 2.881915
+EXTENSION         31 2.882399 2.881884
+LO-REDUCTION      33 2.882399 2.881884
+EXTENSION         35 2.882107 2.881880
+LO-REDUCTION      37 2.882065 2.881880
+EXTENSION         39 2.881930 2.881880
+LO-REDUCTION      41 2.881915 2.881880
+EXTENSION         43 2.881890 2.881880
+LO-REDUCTION      45 2.881884 2.881880
+EXTENSION         47 2.881881 2.881880
+LO-REDUCTION      49 2.881880 2.881880
+Exiting from Nelder Mead minimizer
+    51 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 2.881809
+  Scaled convergence tolerance is 4.29423e-08
+Stepsize computed as 0.690776
+BUILD              7 2.886336 2.881809
+EXTENSION          9 2.881809 2.878379
+LO-REDUCTION      11 2.881809 2.878379
+LO-REDUCTION      13 2.881809 2.878379
+LO-REDUCTION      15 2.881809 2.878379
+LO-REDUCTION      17 2.881809 2.878379
+EXTENSION         19 2.881809 2.877743
+LO-REDUCTION      21 2.880121 2.877743
+EXTENSION         23 2.879710 2.877409
+LO-REDUCTION      25 2.879251 2.877409
+EXTENSION         27 2.878767 2.877259
+LO-REDUCTION      29 2.878379 2.877259
+EXTENSION         31 2.877743 2.877228
+LO-REDUCTION      33 2.877743 2.877228
+EXTENSION         35 2.877451 2.877225
+LO-REDUCTION      37 2.877409 2.877225
+EXTENSION         39 2.877274 2.877224
+LO-REDUCTION      41 2.877259 2.877224
+EXTENSION         43 2.877234 2.877224
+LO-REDUCTION      45 2.877228 2.877224
+EXTENSION         47 2.877225 2.877224
+LO-REDUCTION      49 2.877225 2.877224
+Exiting from Nelder Mead minimizer
+    51 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 2.881699
+  Scaled convergence tolerance is 4.29407e-08
+Stepsize computed as 0.690776
+BUILD              7 2.886226 2.881699
+EXTENSION          9 2.881699 2.878269
+LO-REDUCTION      11 2.881699 2.878269
+LO-REDUCTION      13 2.881699 2.878269
+LO-REDUCTION      15 2.881699 2.878269
+LO-REDUCTION      17 2.881699 2.878269
+EXTENSION         19 2.881699 2.877633
+LO-REDUCTION      21 2.880011 2.877633
+EXTENSION         23 2.879600 2.877299
+LO-REDUCTION      25 2.879141 2.877299
+EXTENSION         27 2.878657 2.877149
+LO-REDUCTION      29 2.878269 2.877149
+EXTENSION         31 2.877633 2.877117
+LO-REDUCTION      33 2.877633 2.877117
+EXTENSION         35 2.877341 2.877114
+LO-REDUCTION      37 2.877299 2.877114
+EXTENSION         39 2.877164 2.877114
+LO-REDUCTION      41 2.877149 2.877114
+EXTENSION         43 2.877124 2.877114
+LO-REDUCTION      45 2.877117 2.877114
+EXTENSION         47 2.877115 2.877114
+LO-REDUCTION      49 2.877114 2.877114
+Exiting from Nelder Mead minimizer
+    51 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 2.881721
+  Scaled convergence tolerance is 4.2941e-08
+Stepsize computed as 0.690776
+BUILD              7 2.886248 2.881721
+EXTENSION          9 2.881721 2.878292
+LO-REDUCTION      11 2.881721 2.878292
+LO-REDUCTION      13 2.881721 2.878292
+LO-REDUCTION      15 2.881721 2.878292
+LO-REDUCTION      17 2.881721 2.878292
+EXTENSION         19 2.881721 2.877655
+LO-REDUCTION      21 2.880034 2.877655
+EXTENSION         23 2.879622 2.877322
+LO-REDUCTION      25 2.879163 2.877322
+EXTENSION         27 2.878680 2.877171
+LO-REDUCTION      29 2.878292 2.877171
+EXTENSION         31 2.877655 2.877140
+LO-REDUCTION      33 2.877655 2.877140
+EXTENSION         35 2.877364 2.877137
+LO-REDUCTION      37 2.877322 2.877137
+EXTENSION         39 2.877186 2.877137
+LO-REDUCTION      41 2.877171 2.877137
+EXTENSION         43 2.877146 2.877137
+LO-REDUCTION      45 2.877140 2.877137
+EXTENSION         47 2.877137 2.877137
+LO-REDUCTION      49 2.877137 2.877137
+Exiting from Nelder Mead minimizer
+    51 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 2.881699
+  Scaled convergence tolerance is 4.29407e-08
+Stepsize computed as 0.690776
+BUILD              7 2.886226 2.881699
+EXTENSION          9 2.881699 2.878269
+LO-REDUCTION      11 2.881699 2.878269
+LO-REDUCTION      13 2.881699 2.878269
+LO-REDUCTION      15 2.881699 2.878269
+LO-REDUCTION      17 2.881699 2.878269
+EXTENSION         19 2.881699 2.877633
+LO-REDUCTION      21 2.880011 2.877633
+EXTENSION         23 2.879600 2.877299
+LO-REDUCTION      25 2.879141 2.877299
+EXTENSION         27 2.878657 2.877149
+LO-REDUCTION      29 2.878269 2.877149
+EXTENSION         31 2.877633 2.877117
+LO-REDUCTION      33 2.877633 2.877117
+EXTENSION         35 2.877341 2.877114
+LO-REDUCTION      37 2.877299 2.877114
+EXTENSION         39 2.877164 2.877114
+LO-REDUCTION      41 2.877149 2.877114
+EXTENSION         43 2.877124 2.877114
+LO-REDUCTION      45 2.877117 2.877114
+EXTENSION         47 2.877115 2.877114
+LO-REDUCTION      49 2.877114 2.877114
+Exiting from Nelder Mead minimizer
+    51 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 0.957821
+  Scaled convergence tolerance is 1.42726e-08
+Stepsize computed as 0.690776
+BUILD              7 0.959262 0.957821
+EXTENSION          9 0.957821 0.956744
+LO-REDUCTION      11 0.957821 0.956744
+LO-REDUCTION      13 0.957821 0.956744
+LO-REDUCTION      15 0.957821 0.956744
+LO-REDUCTION      17 0.957821 0.956744
+EXTENSION         19 0.957821 0.956546
+LO-REDUCTION      21 0.957289 0.956546
+EXTENSION         23 0.957160 0.956442
+LO-REDUCTION      25 0.957017 0.956442
+EXTENSION         27 0.956865 0.956395
+LO-REDUCTION      29 0.956744 0.956395
+EXTENSION         31 0.956546 0.956386
+LO-REDUCTION      33 0.956546 0.956386
+EXTENSION         35 0.956455 0.956385
+LO-REDUCTION      37 0.956442 0.956385
+EXTENSION         39 0.956400 0.956385
+LO-REDUCTION      41 0.956395 0.956385
+EXTENSION         43 0.956388 0.956385
+LO-REDUCTION      45 0.956386 0.956385
+EXTENSION         47 0.956385 0.956385
+LO-REDUCTION      49 0.956385 0.956385
+Exiting from Nelder Mead minimizer
+    51 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 6.254079
+  Scaled convergence tolerance is 9.3193e-08
+Stepsize computed as 0.690776
+BUILD              7 6.254199 6.254079
+EXTENSION          9 6.254079 6.253988
+LO-REDUCTION      11 6.254079 6.253988
+LO-REDUCTION      13 6.254079 6.253988
+LO-REDUCTION      15 6.254079 6.253988
+LO-REDUCTION      17 6.254079 6.253988
+EXTENSION         19 6.254079 6.253972
+LO-REDUCTION      21 6.254034 6.253972
+EXTENSION         23 6.254023 6.253963
+LO-REDUCTION      25 6.254011 6.253963
+EXTENSION         27 6.253999 6.253959
+LO-REDUCTION      29 6.253988 6.253959
+EXTENSION         31 6.253972 6.253958
+LO-REDUCTION      33 6.253972 6.253958
+EXTENSION         35 6.253964 6.253958
+LO-REDUCTION      37 6.253963 6.253958
+EXTENSION         39 6.253959 6.253958
+LO-REDUCTION      41 6.253959 6.253958
+EXTENSION         43 6.253958 6.253958
+Exiting from Nelder Mead minimizer
+    45 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 0.957821
+  Scaled convergence tolerance is 1.42726e-08
+Stepsize computed as 0.690776
+BUILD              7 0.959262 0.957821
+EXTENSION          9 0.957821 0.956744
+LO-REDUCTION      11 0.957821 0.956744
+LO-REDUCTION      13 0.957821 0.956744
+LO-REDUCTION      15 0.957821 0.956744
+LO-REDUCTION      17 0.957821 0.956744
+EXTENSION         19 0.957821 0.956546
+LO-REDUCTION      21 0.957289 0.956546
+EXTENSION         23 0.957160 0.956442
+LO-REDUCTION      25 0.957017 0.956442
+EXTENSION         27 0.956865 0.956395
+LO-REDUCTION      29 0.956744 0.956395
+EXTENSION         31 0.956546 0.956386
+LO-REDUCTION      33 0.956546 0.956386
+EXTENSION         35 0.956455 0.956385
+LO-REDUCTION      37 0.956442 0.956385
+EXTENSION         39 0.956400 0.956385
+LO-REDUCTION      41 0.956395 0.956385
+EXTENSION         43 0.956388 0.956385
+LO-REDUCTION      45 0.956386 0.956385
+EXTENSION         47 0.956385 0.956385
+LO-REDUCTION      49 0.956385 0.956385
+Exiting from Nelder Mead minimizer
+    51 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 6.254079
+  Scaled convergence tolerance is 9.3193e-08
+Stepsize computed as 0.690776
+BUILD              7 6.254199 6.254079
+EXTENSION          9 6.254079 6.253988
+LO-REDUCTION      11 6.254079 6.253988
+LO-REDUCTION      13 6.254079 6.253988
+LO-REDUCTION      15 6.254079 6.253988
+LO-REDUCTION      17 6.254079 6.253988
+EXTENSION         19 6.254079 6.253972
+LO-REDUCTION      21 6.254034 6.253972
+EXTENSION         23 6.254023 6.253963
+LO-REDUCTION      25 6.254011 6.253963
+EXTENSION         27 6.253999 6.253959
+LO-REDUCTION      29 6.253988 6.253959
+EXTENSION         31 6.253972 6.253958
+LO-REDUCTION      33 6.253972 6.253958
+EXTENSION         35 6.253964 6.253958
+LO-REDUCTION      37 6.253963 6.253958
+EXTENSION         39 6.253959 6.253958
+LO-REDUCTION      41 6.253959 6.253958
+EXTENSION         43 6.253958 6.253958
+Exiting from Nelder Mead minimizer
+    45 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 4.805765
+  Scaled convergence tolerance is 7.16115e-08
+Stepsize computed as 0.690776
+BUILD              7 4.806076 4.805765
+EXTENSION          9 4.805765 4.805531
+LO-REDUCTION      11 4.805765 4.805531
+LO-REDUCTION      13 4.805765 4.805531
+LO-REDUCTION      15 4.805765 4.805531
+LO-REDUCTION      17 4.805765 4.805531
+EXTENSION         19 4.805765 4.805488
+LO-REDUCTION      21 4.805650 4.805488
+EXTENSION         23 4.805622 4.805465
+LO-REDUCTION      25 4.805590 4.805465
+EXTENSION         27 4.805557 4.805455
+LO-REDUCTION      29 4.805531 4.805455
+EXTENSION         31 4.805488 4.805453
+LO-REDUCTION      33 4.805488 4.805453
+EXTENSION         35 4.805468 4.805452
+LO-REDUCTION      37 4.805465 4.805452
+EXTENSION         39 4.805456 4.805452
+LO-REDUCTION      41 4.805455 4.805452
+EXTENSION         43 4.805453 4.805452
+LO-REDUCTION      45 4.805453 4.805452
+Exiting from Nelder Mead minimizer
+    47 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 3.872303
+  Scaled convergence tolerance is 5.77018e-08
+Stepsize computed as 0.690776
+BUILD              7 3.872872 3.872303
+EXTENSION          9 3.872303 3.871875
+LO-REDUCTION      11 3.872303 3.871875
+LO-REDUCTION      13 3.872303 3.871875
+LO-REDUCTION      15 3.872303 3.871875
+LO-REDUCTION      17 3.872303 3.871875
+EXTENSION         19 3.872303 3.871796
+LO-REDUCTION      21 3.872092 3.871796
+EXTENSION         23 3.872041 3.871755
+LO-REDUCTION      25 3.871984 3.871755
+EXTENSION         27 3.871924 3.871736
+LO-REDUCTION      29 3.871875 3.871736
+EXTENSION         31 3.871796 3.871732
+LO-REDUCTION      33 3.871796 3.871732
+EXTENSION         35 3.871760 3.871732
+LO-REDUCTION      37 3.871755 3.871732
+EXTENSION         39 3.871738 3.871732
+LO-REDUCTION      41 3.871736 3.871732
+EXTENSION         43 3.871733 3.871732
+LO-REDUCTION      45 3.871732 3.871732
+EXTENSION         47 3.871732 3.871732
+Exiting from Nelder Mead minimizer
+    49 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 3.351805
+  Scaled convergence tolerance is 4.99458e-08
+Stepsize computed as 0.690776
+BUILD              7 3.352594 3.351805
+EXTENSION          9 3.351805 3.351211
+LO-REDUCTION      11 3.351805 3.351211
+LO-REDUCTION      13 3.351805 3.351211
+LO-REDUCTION      15 3.351805 3.351211
+LO-REDUCTION      17 3.351805 3.351211
+EXTENSION         19 3.351805 3.351101
+LO-REDUCTION      21 3.351513 3.351101
+EXTENSION         23 3.351441 3.351044
+LO-REDUCTION      25 3.351362 3.351044
+EXTENSION         27 3.351278 3.351018
+LO-REDUCTION      29 3.351211 3.351018
+EXTENSION         31 3.351101 3.351013
+LO-REDUCTION      33 3.351101 3.351013
+EXTENSION         35 3.351051 3.351012
+LO-REDUCTION      37 3.351044 3.351012
+EXTENSION         39 3.351021 3.351012
+LO-REDUCTION      41 3.351018 3.351012
+EXTENSION         43 3.351014 3.351012
+LO-REDUCTION      45 3.351013 3.351012
+EXTENSION         47 3.351012 3.351012
+Exiting from Nelder Mead minimizer
+    49 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 2.585396
+  Scaled convergence tolerance is 3.85254e-08
+Stepsize computed as 0.690776
+BUILD              7 2.586642 2.585396
+EXTENSION          9 2.585396 2.584459
+LO-REDUCTION      11 2.585396 2.584459
+LO-REDUCTION      13 2.585396 2.584459
+LO-REDUCTION      15 2.585396 2.584459
+LO-REDUCTION      17 2.585396 2.584459
+EXTENSION         19 2.585396 2.584285
+LO-REDUCTION      21 2.584934 2.584285
+EXTENSION         23 2.584822 2.584194
+LO-REDUCTION      25 2.584696 2.584194
+EXTENSION         27 2.584564 2.584153
+LO-REDUCTION      29 2.584459 2.584153
+EXTENSION         31 2.584285 2.584145
+LO-REDUCTION      33 2.584285 2.584145
+EXTENSION         35 2.584205 2.584144
+LO-REDUCTION      37 2.584194 2.584144
+EXTENSION         39 2.584157 2.584144
+LO-REDUCTION      41 2.584153 2.584144
+EXTENSION         43 2.584146 2.584144
+LO-REDUCTION      45 2.584145 2.584144
+EXTENSION         47 2.584144 2.584144
+LO-REDUCTION      49 2.584144 2.584144
+Exiting from Nelder Mead minimizer
+    51 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 2.925611
+  Scaled convergence tolerance is 4.3595e-08
+Stepsize computed as 0.690776
+BUILD              7 2.926633 2.925611
+EXTENSION          9 2.925611 2.924841
+LO-REDUCTION      11 2.925611 2.924841
+LO-REDUCTION      13 2.925611 2.924841
+LO-REDUCTION      15 2.925611 2.924841
+LO-REDUCTION      17 2.925611 2.924841
+EXTENSION         19 2.925611 2.924699
+LO-REDUCTION      21 2.925232 2.924699
+EXTENSION         23 2.925139 2.924624
+LO-REDUCTION      25 2.925036 2.924624
+EXTENSION         27 2.924928 2.924590
+LO-REDUCTION      29 2.924841 2.924590
+EXTENSION         31 2.924699 2.924583
+LO-REDUCTION      33 2.924699 2.924583
+EXTENSION         35 2.924633 2.924583
+LO-REDUCTION      37 2.924624 2.924583
+EXTENSION         39 2.924594 2.924583
+LO-REDUCTION      41 2.924590 2.924583
+EXTENSION         43 2.924585 2.924583
+LO-REDUCTION      45 2.924583 2.924583
+EXTENSION         47 2.924583 2.924583
+Exiting from Nelder Mead minimizer
+    49 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 2.882535
+  Scaled convergence tolerance is 4.29531e-08
+Stepsize computed as 0.690776
+BUILD              7 2.883583 2.882535
+EXTENSION          9 2.882535 2.881745
+LO-REDUCTION      11 2.882535 2.881745
+LO-REDUCTION      13 2.882535 2.881745
+LO-REDUCTION      15 2.882535 2.881745
+LO-REDUCTION      17 2.882535 2.881745
+EXTENSION         19 2.882535 2.881599
+LO-REDUCTION      21 2.882146 2.881599
+EXTENSION         23 2.882051 2.881523
+LO-REDUCTION      25 2.881945 2.881523
+EXTENSION         27 2.881834 2.881488
+LO-REDUCTION      29 2.881745 2.881488
+EXTENSION         31 2.881599 2.881481
+LO-REDUCTION      33 2.881599 2.881481
+EXTENSION         35 2.881532 2.881480
+LO-REDUCTION      37 2.881523 2.881480
+EXTENSION         39 2.881492 2.881480
+LO-REDUCTION      41 2.881488 2.881480
+EXTENSION         43 2.881482 2.881480
+LO-REDUCTION      45 2.881481 2.881480
+EXTENSION         47 2.881480 2.881480
+Exiting from Nelder Mead minimizer
+    49 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 2.878167
+  Scaled convergence tolerance is 4.2888e-08
+Stepsize computed as 0.690776
+BUILD              7 2.879219 2.878167
+EXTENSION          9 2.878167 2.877376
+LO-REDUCTION      11 2.878167 2.877376
+LO-REDUCTION      13 2.878167 2.877376
+LO-REDUCTION      15 2.878167 2.877376
+LO-REDUCTION      17 2.878167 2.877376
+EXTENSION         19 2.878167 2.877229
+LO-REDUCTION      21 2.877777 2.877229
+EXTENSION         23 2.877682 2.877152
+LO-REDUCTION      25 2.877576 2.877152
+EXTENSION         27 2.877465 2.877118
+LO-REDUCTION      29 2.877376 2.877118
+EXTENSION         31 2.877229 2.877111
+LO-REDUCTION      33 2.877229 2.877111
+EXTENSION         35 2.877162 2.877110
+LO-REDUCTION      37 2.877152 2.877110
+EXTENSION         39 2.877121 2.877110
+LO-REDUCTION      41 2.877118 2.877110
+EXTENSION         43 2.877112 2.877110
+LO-REDUCTION      45 2.877111 2.877110
+EXTENSION         47 2.877110 2.877110
+Exiting from Nelder Mead minimizer
+    49 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 2.878252
+  Scaled convergence tolerance is 4.28893e-08
+Stepsize computed as 0.690776
+BUILD              7 2.879303 2.878252
+EXTENSION          9 2.878252 2.877460
+LO-REDUCTION      11 2.878252 2.877460
+LO-REDUCTION      13 2.878252 2.877460
+LO-REDUCTION      15 2.878252 2.877460
+LO-REDUCTION      17 2.878252 2.877460
+EXTENSION         19 2.878252 2.877313
+LO-REDUCTION      21 2.877861 2.877313
+EXTENSION         23 2.877767 2.877237
+LO-REDUCTION      25 2.877661 2.877237
+EXTENSION         27 2.877549 2.877202
+LO-REDUCTION      29 2.877460 2.877202
+EXTENSION         31 2.877313 2.877195
+LO-REDUCTION      33 2.877313 2.877195
+EXTENSION         35 2.877246 2.877194
+LO-REDUCTION      37 2.877237 2.877194
+EXTENSION         39 2.877206 2.877194
+LO-REDUCTION      41 2.877202 2.877194
+EXTENSION         43 2.877196 2.877194
+LO-REDUCTION      45 2.877195 2.877194
+EXTENSION         47 2.877194 2.877194
+Exiting from Nelder Mead minimizer
+    49 function evaluations used
+  Nelder-Mead direct search function minimizer
+function value for initial parameters = 2.878167
+  Scaled convergence tolerance is 4.2888e-08
+Stepsize computed as 0.690776
+BUILD              7 2.879219 2.878167
+EXTENSION          9 2.878167 2.877376
+LO-REDUCTION      11 2.878167 2.877376
+LO-REDUCTION      13 2.878167 2.877376
+LO-REDUCTION      15 2.878167 2.877376
+LO-REDUCTION      17 2.878167 2.877376
+EXTENSION         19 2.878167 2.877229
+LO-REDUCTION      21 2.877777 2.877229
+EXTENSION         23 2.877682 2.877152
+LO-REDUCTION      25 2.877576 2.877152
+EXTENSION         27 2.877465 2.877118
+LO-REDUCTION      29 2.877376 2.877118
+EXTENSION         31 2.877229 2.877111
+LO-REDUCTION      33 2.877229 2.877111
+EXTENSION         35 2.877162 2.877110
+LO-REDUCTION      37 2.877152 2.877110
+EXTENSION         39 2.877121 2.877110
+LO-REDUCTION      41 2.877118 2.877110
+EXTENSION         43 2.877112 2.877110
+LO-REDUCTION      45 2.877111 2.877110
+EXTENSION         47 2.877110 2.877110
+Exiting from Nelder Mead minimizer
+    49 function evaluations used
+
+          estimate  ci.lb  ci.ub 
+sigma^2.1   0.0000 0.0000 2.3657 
+sigma.1     0.0000 0.0000 1.5381 
+
+          estimate  ci.lb  ci.ub 
+sigma^2.2   0.0000 0.0000 0.7888 
+sigma.2     0.0000 0.0000 0.8881 
+

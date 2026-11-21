@@ -1,8 +1,8 @@
 # ------------------------------------------------------------------
 # Allowlist: everything in this folder is LOCAL ONLY unless it is
 # re-included below. What gets pushed: the papers used, the datasets,
-# the figures, the code for the parent paper, and the novel approach's
-# code, results and figures.
+# the code (parent paper reproduction and novel approach), and results/
+# (every table, figure and log the code writes).
 # To push something else later, add a "!" line for it here.
 # ------------------------------------------------------------------
 /*
@@ -13,7 +13,9 @@
 !/DS340w_research-paper.Rproj
 
 # papers actually used (parent + the two reference papers)
-!/The effect of eccentric phase duration*.pdf
+!/parent_paper/
+/parent_paper/*
+!/parent_paper/Amdi_King_2025_eccentric_phase_duration.pdf
 !/reference_paper_1/
 /reference_paper_1/*
 !/reference_paper_1/journal.pone.0354725.pdf
@@ -28,6 +30,7 @@
 !/data/raw/
 !/data/splits/
 !/data/processed/
+!/data/parent_paper_tables/
 
 # code for the parent paper
 !/code/
@@ -37,23 +40,18 @@
 !/code/generate_forest_plots.R
 !/code/generate_orchard_plot.R
 
-# novel approach: code, results and figures
+# novel approach code
 !/code/novel/
-!/results/
 
-# figures (parent paper reproduction)
-!/figures/
-/figures/*
-!/figures/Figure*.png
-!/figures/novel/
-!/figures and data/
-/figures and data/*
-!/figures and data/Orchard_strength_training_status.png
-!/figures and data/t000*.csv
+# every output: results/tables, results/figures and results/logs
+!/results/
 
 # the parent paper's original OSF materials (minus the superseded pre-print version)
 !/s6uqn-osfstorage-archive/
 /s6uqn-osfstorage-archive/Pre-print stage without Kojic et al. 2025/
+
+# a rerun of the PubMed search (step 1); the saved search used in the paper stays
+/data/processed/pubmed_update_search_rerun.csv
 
 # never pushed, wherever they appear
 .claude/

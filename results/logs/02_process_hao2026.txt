@@ -1,0 +1,10 @@
+         Outcome 2-s group: lifters 2-s group: mean change
+  Squat 1RM (kg)                 10                 12.500
+ CMJ height (cm)                 10                  5.193
+ 2-s group: SD of change 4-s group: lifters 4-s group: mean change
+                5.400617                 10                  8.500
+                2.273944                 10                 -4.721
+ 4-s group: SD of change
+                3.374743
+                3.218552
+Wrote data/processed/hao2026_rows.csv
